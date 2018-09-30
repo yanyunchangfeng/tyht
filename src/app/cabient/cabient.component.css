@@ -1,0 +1,53 @@
+ul {
+  padding: 30px;
+  background-color: #ccc;
+  width: 225px; }
+
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  height: 20px;
+  line-height: 20px;
+  position: relative;
+  width: 215px;
+  overflow: visible;
+  border-bottom: 1px solid #ccc; }
+
+li > img {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+li > span {
+  position: absolute;
+  width: 30px;
+  text-align: center;
+  top: 0px;
+  right: -30px; }
+
+li > b {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 10px;
+  top: 6px;
+  left: -16px;
+  background-color: transparent; }
+
+li > b.empty {
+  background-color: blue; }
+
+li > b.danger {
+  background-color: red; }
+
+li > b.book {
+  background-color: yellow; }
+
+li > b.normal {
+  background-color: green; }
+
+/deep/ * {
+  box-sizing: content-box; }
+
+/*# sourceMappingURL=cabient.component.css.map */

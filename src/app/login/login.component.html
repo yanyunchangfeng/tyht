@@ -1,0 +1,45 @@
+<body class="login-body">
+    <div class="card login-panel ui-fluid">
+  <div class="ui-g">
+    <div class="ui-g-12">
+      <h1 style="margin: 0">后台登入</h1>
+    </div>
+    <form [formGroup]="loginForm" (submit)="doLogin()">
+      <div class="ui-g-12">
+                    <span class="md-inputfield">
+                        <input type="text" autocomplete="off" formControlName="name" pInputText>
+                        <label>账号:</label>
+                      <div *ngIf="loginForm.get('name').valid||!loginForm.get('name').untouched">
+                         <div *ngIf="loginForm.hasError('required','name')" class="ui-message ui-messages-error ui-corner-all">用户名为必填项</div>
+                         <div *ngIf="loginForm.hasError('minlength','name')" class="ui-message ui-messages-error ui-corner-all">用户名最少为5位</div>
+                      </div>
+                    </span>
+      </div>
+      <div class="ui-g-12">
+                  <span class="md-inputfield">
+                      <input type="password" autocomplete="off" formControlName="password" pInputText>
+                      <label>密码:</label>
+                    <div *ngIf="loginForm.get('password').valid||!loginForm.get('password').untouched">
+                       <div *ngIf="loginForm.hasError('required','password')"  class="ui-message ui-messages-error ui-corner-all">密码为必填项</div>
+                      <div *ngIf="loginForm.hasError('minlength','password')" class="ui-message ui-messages-error ui-corner-all">密码最少为5位</div>
+                    </div>
+                  </span>
+
+      </div>
+      <div class="ui-g-12">
+        <button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left" [disabled]="!loginForm.valid">
+          <span class="ui-button-icon-left ui-c fa fa-fw ui-icon-person"></span>
+          <span class="ui-button-text ui-c">登入</span>
+        </button>
+        <button type="button"
+                class="secondary ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left">
+          <span class="ui-button-icon-left ui-c fa fa-fw ui-icon-help"></span>
+          <span class="ui-button-text ui-c">忘记密码</span>
+        </button>
+      </div>
+    </form>
+  </div>
+
+</div>
+</body>
+<p-toast></p-toast>

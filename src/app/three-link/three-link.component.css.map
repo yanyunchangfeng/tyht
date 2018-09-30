@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,OAAK;EACH,UAAU,EAAE,WAAW",
+"sources": ["three-link.component.scss"],
+"names": [],
+"file": "three-link.component.css"
+}

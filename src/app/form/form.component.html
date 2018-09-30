@@ -1,0 +1,64 @@
+<form [formGroup]="myform" (submit)="submit(myform,$event)">
+  <div class="ui-g form-group ui-fluid">
+    <div class="ui-g-1">
+      <label class=" hx-sel-label">手机号：</label>
+    </div>
+    <div class="ui-g-2">
+      <input pInputText  formControlName="phone" [class.hasError]="myform.get('phone').invalid&&!myform.get('phone').pristine"/>
+      <!-- hidden方法一-->
+      <!--
+        <div [hidden]="myform.get('phone').valid||myform.get('phone').untouched">
+          <div [hidden]="!myform.hasError('phone','phone')">{{myform.getError('phone','phone')?.descxx}}</div>
+        </div>
+        -->
+        <div *ngIf="myform.get('phone').valid||!myform.get('phone').pristine">
+          <div *ngIf="myform.hasError('phone','phone')">
+            {{myform.getError('phone','phone')?.descxx}}
+          </div>
+        </div>
+        <div *ngIf="myform.get('phone').pending">
+          正在校验手机号的合法性
+        </div>
+    </div>
+    <div class="ui-g-1">
+      <label class=" hx-sel-label" >开始日期：</label>
+    </div>
+    <div class="ui-g-2">
+      <p-calendar [showTime]="true" formControlName="startTime" #startTime></p-calendar>
+    </div>
+    <div class="ui-g-1">
+      <label class="hx-sel-label">结束日期：</label>
+    </div>
+    <div class="ui-g-2">
+      <p-calendar [showTime]="true" formControlName="endTime" [minDate]="startTime.value"></p-calendar>
+    </div>
+    <div class="ui-g-1">
+      <label class="hx-sel-label">邮箱：</label>
+    </div>
+    <div class="ui-g-2">
+      <input pInputText formControlName="email"/>
+      <div *ngIf="myform.get('email').valid||!myform.get('email').untouched">
+        <div *ngIf="myform.hasError('required','email')">请输入邮箱地址</div>
+        <div *ngIf="myform.hasError('email','email')">请输入正确的邮箱地址</div>
+      </div>
+    </div>
+  </div>
+  <div class="ui-g form-group ui-fluid" formGroupName="passwordsGroup">
+    <div class="ui-g-1">
+      <label class="hx-sel-label">密码：</label>
+    </div>
+    <div class="ui-g-2">
+      <input pInputText formControlName="password" type="password"/>
+      <div *ngIf="myform.hasError('minlength',['passwordsGroup','password'])">密码最小长度是6</div>
+    </div>
+    <div class="ui-g-1">
+      <label class="hx-sel-label">确认密码：</label>
+    </div>
+    <div class="ui-g-2">
+      <input pInputText formControlName="pconfirm" type="password"/>
+      <div *ngIf="myform.hasError('equal',['passwordsGroup'])">
+        {{myform.getError('equal','passwordsGroup')?.desff}}
+      </div>
+    </div>
+  </div>
+</form>
