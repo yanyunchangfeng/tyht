@@ -1,0 +1,43 @@
+<div class="layout-wrapper" [ngClass]="{'layout-compact':layoutCompact}" (click)="onLayoutClick()">
+
+  <div #layoutContainer class="layout-container"
+       [ngClass]="{'menu-layout-static': !isOverlay(),
+            'menu-layout-overlay': isOverlay(),
+            'layout-menu-overlay-active': overlayMenuActive,
+            'menu-layout-horizontal': isHorizontal(),
+            'menu-layout-slim': isSlim(),
+            'layout-menu-static-inactive': staticMenuDesktopInactive,
+            'layout-menu-static-active': staticMenuMobileActive}">
+
+    <app-topbar></app-topbar>
+
+    <div class="layout-menu" [ngClass]="{'layout-menu-dark':darkMenu}" (click)="onMenuClick($event)">
+      <p-scrollPanel #scrollPanel [style]="{height: '100%'}">
+        <app-inline-profile *ngIf="profileMode=='inline'&&!isHorizontal()"></app-inline-profile>
+        <app-menu [reset]="resetMenu"></app-menu>
+      </p-scrollPanel>
+    </div>
+
+    <div class="layout-main">
+      <app-breadcrumb></app-breadcrumb>
+
+      <div class="layout-content">
+        <router-outlet></router-outlet>
+
+        <!--<app-footer></app-footer>-->
+
+        <!--全局通知消息通知栏-->
+        <p-growl></p-growl>
+      </div>
+    </div>
+
+    <app-rightpanel></app-rightpanel>
+
+    <div class="layout-mask"></div>
+  </div>
+
+</div>
+<ng-progress [direction]="'ltr+'" [min]="5" [max]="100" [speed]="200"  [trickleSpeed]="100"
+             [spinner]="true" [spinnerPosition]="'left'" [thick]="true" [meteor]="true"
+             [color]="'#5180ce'" [ease]="'easeInOutCubic'"></ng-progress>
+<p-toast></p-toast>
