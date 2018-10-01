@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient,HttpHeaders} from "@angular/common/http";
 import {map} from "rxjs/internal/operators";
+
 @Injectable({
   providedIn: 'root'
 })
@@ -11,17 +12,13 @@ export class PublicService {
     return this.http.get('assets/equipment.json')
   }
   getAreas(){
-    return this.http.get('assets/province.json').pipe(map(res=>{return this.transform(res['province'])}))
+    return this.http.get('assets/province.json').pipe(map(res=>{return res['province']}))
   }
-  transform(arr){
-    /*
-    let newarr = [];
-    for(let i = 0;i<arr.length;i++){
-      let temp = arr[i];
-      newarr.push({name:temp['name'],code:temp['code']})
-    }
-    */
-    return arr;
+  getOptions(){
+    let headers = new HttpHeaders();
+    headers.append('token','78erewregvfdsgfsd');
+    let options = {headers:headers};
+    return options
   }
   getData():any{
     return this.http.get('assets/piedata.json')
