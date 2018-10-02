@@ -50,6 +50,15 @@ export class AppMenuComponent implements OnInit {
             label: 'editor', icon: 'subject', routerLink: ['./form/editor']
           }
         ]
+      },
+      {
+        label: '内容投影', icon: 'settings',
+        items: [
+          {
+            label: '内容', icon: 'subject', routerLink: ['./shadow']
+          }
+
+        ]
       }
     ];
   }

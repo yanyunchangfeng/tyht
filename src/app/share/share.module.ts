@@ -8,6 +8,7 @@ import {
   CalendarModule,
   GrowlModule,
   ScrollPanelModule,
+  CardModule
 } from "primeng/primeng";
 import {ToastModule} from "primeng/toast";
 @NgModule({
@@ -20,6 +21,7 @@ import {ToastModule} from "primeng/toast";
     CalendarModule,
     ScrollPanelModule,
     GrowlModule,
+    CardModule,
     EchartDirective,
     ToastModule,
     ReactiveFormsModule
