@@ -1,3 +1,19 @@
-<textarea placeholder="说点什么吧..."></textarea>
-<input type="file" multiple="multiple" (change)="imageUpload()" #file>
-<img [src]=src alt="暂无照片">
+<div>
+  <textarea pInputTextarea></textarea>
+</div>
+<div class="upload-warp">
+  <input type="file" class="upload-pic" (change)="imageUpload($event)" #file accept="image/*">
+  <i class="pi pi-plus upload-icon"></i>
+  <span class="upload-text">本地上传图片</span>
+</div>
+<div class="img-container">
+  <div class="img-row" *ngFor="let file of files;let i = index;">
+    <div>
+      <img  *ngIf="isImage(file)" [src]="file.objectURL" (load)="compressImage($event.target)" width="100" alt="暂无图片">
+    </div>
+    <div>
+      <i class="pi pi-times" (click)="remove($event,i)"></i>
+    </div>
+  </div>
+</div>
+<canvas #view ></canvas>

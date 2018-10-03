@@ -7,6 +7,7 @@ import {
   InputTextModule,
   CalendarModule,
   GrowlModule,
+  InputTextareaModule,
   ScrollPanelModule,
   CardModule
 } from "primeng/primeng";
@@ -22,6 +23,7 @@ import {ToastModule} from "primeng/toast";
     ScrollPanelModule,
     GrowlModule,
     CardModule,
+    InputTextareaModule,
     EchartDirective,
     ToastModule,
     FormsModule,
