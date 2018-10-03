@@ -1,5 +1,6 @@
 import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import {PublicService} from "../../service/public.service"
+import mytransform from "../../common/util";
 @Component({
   selector: 'app-three-link',
   templateUrl: './three-link.component.html',
@@ -18,7 +19,7 @@ export class ThreeLinkComponent implements OnInit {
   ngOnInit() {
     this.publicService.getAreas().subscribe(data=>{
       this.oldproviceData = data;
-      this.provinceData = this.transform(this.oldproviceData);
+      this.provinceData = mytransform.Util.transform(this.oldproviceData,'name','code');
       this.changeProvince();
     })
   }
@@ -27,7 +28,7 @@ export class ThreeLinkComponent implements OnInit {
       let temp = this.oldproviceData[i];
       if(this.area.provinceName['name'] === temp['name']){
         this.oldcityData = temp['city'];
-        this.cityData = this.transform(this.oldcityData);
+        this.cityData = mytransform.Util.transform(this.oldcityData,'name','code');
         break;
       }
     }
@@ -63,16 +64,5 @@ export class ThreeLinkComponent implements OnInit {
       this.area.townName.code = this.townData[0]['code'];
     }
     this.areaOut.emit(this.area);
-  }
-  transform(arr){
-    let newarr = [];
-    for (let i =0;i<arr.length;i++){
-      let temp = arr[i];
-      let obj = {};
-      obj['name'] = temp['name'];
-      obj['code'] = temp['code'];
-      newarr.push(obj);
-    }
-    return newarr;
   }
 }
