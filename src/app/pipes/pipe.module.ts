@@ -1,7 +1,8 @@
 import {NgModule} from "@angular/core";
-import {GenderFilterPipe} from "./filter.pipe";
+import {GenderFilterPipe} from "./filter"
 @NgModule({
-  imports:[GenderFilterPipe],
+  imports:[],
+  declarations:[GenderFilterPipe],
   exports:[GenderFilterPipe]
 })
 export class PipeModule{}

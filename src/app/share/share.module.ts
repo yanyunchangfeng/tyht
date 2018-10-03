@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule,ReactiveFormsModule} from "@angular/forms";
 import {EchartDirective} from "../directive/echart.directive";
 import {
   DropdownModule,
@@ -24,6 +24,7 @@ import {ToastModule} from "primeng/toast";
     CardModule,
     EchartDirective,
     ToastModule,
+    FormsModule,
     ReactiveFormsModule
   ]
 })

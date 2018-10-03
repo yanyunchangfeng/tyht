@@ -48,6 +48,9 @@ export class AppMenuComponent implements OnInit {
           },
           {
             label: 'editor', icon: 'subject', routerLink: ['./form/editor']
+          },
+          {
+            label: 'linkage', icon: 'subject', routerLink: ['./form/linkage']
           }
         ]
       },

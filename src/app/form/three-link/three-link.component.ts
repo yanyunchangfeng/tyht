@@ -1,5 +1,5 @@
 import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
-import {PublicService} from "../service/public.service";
+import {PublicService} from "../../service/public.service"
 @Component({
   selector: 'app-three-link',
   templateUrl: './three-link.component.html',

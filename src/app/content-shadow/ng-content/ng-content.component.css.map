@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAAA,OAAO;EACL,gBAAgB,EAAE,OAAO",
+"sources": ["ng-content.component.scss"],
 "names": [],
 "file": "ng-content.component.css"
 }
