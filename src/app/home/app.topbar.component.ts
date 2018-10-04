@@ -175,5 +175,4 @@ export class AppTopbarComponent {
     this.router.navigateByUrl('sx/sxlogin');
     // TODO:广播登出事件 该请的要清了
   }
-
 }

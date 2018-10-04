@@ -9,9 +9,9 @@ import {
   GrowlModule,
   InputTextareaModule,
   ScrollPanelModule,
+  ConfirmDialogModule,
   CardModule
 } from "primeng/primeng";
-import {ToastModule} from "primeng/toast";
 @NgModule({
   imports: [],
   declarations:[EchartDirective],
@@ -23,9 +23,9 @@ import {ToastModule} from "primeng/toast";
     ScrollPanelModule,
     GrowlModule,
     CardModule,
+    ConfirmDialogModule,
     InputTextareaModule,
     EchartDirective,
-    ToastModule,
     FormsModule,
     ReactiveFormsModule
   ]

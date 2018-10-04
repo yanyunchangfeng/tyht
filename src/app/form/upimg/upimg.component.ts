@@ -1,6 +1,6 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {BasePage} from "../../common/base-page";
-import {MessageService} from "primeng/api";
+import {ConfirmationService, MessageService} from "primeng/api";
 import {DomSanitizer} from "@angular/platform-browser";
 
 @Component({
@@ -13,10 +13,12 @@ export class UpimgComponent extends BasePage implements  OnInit {
   @ViewChild('view') view :ElementRef;
   src;
   files:File[];
-  constructor(public message:MessageService,
-              public sanitizer: DomSanitizer
+  constructor(
+    public message:MessageService,
+    public confirmationService:ConfirmationService,
+    public sanitizer: DomSanitizer
               ) {
-    super(message)
+    super(message,confirmationService)
   }
   ngOnInit() {
     this.files = [];

@@ -20,7 +20,7 @@ export class AppMenuComponent implements OnInit {
 
   ngOnInit() {
     this.model = [
-      {label: '首页', icon: 'dashboard', routerLink: ['/sx/sxmngm/app']},
+      {label: '首页', icon: 'dashboard', routerLink: ['/']},
       {
         label: '可视化模块', icon: 'settings',
         items: [
