@@ -16,5 +16,4 @@ export class WangeditorComponent implements OnInit,AfterViewInit {
     this.editor = new wangEditor(editordom);
     this.editor.create();
   }
-
 }

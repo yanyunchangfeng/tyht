@@ -1,15 +1,14 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { SelectivePreloadingStrategyService } from './selective-preloading-strategy.service';
-
+import {SelectivePreloadingStrategy} from "./selective-preloading-strategy.service"
 describe('SelectivePreloadingStrategyService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [SelectivePreloadingStrategyService]
+      providers: [SelectivePreloadingStrategy]
     });
   });
 
-  it('should be created', inject([SelectivePreloadingStrategyService], (service: SelectivePreloadingStrategyService) => {
+  it('should be created', inject([SelectivePreloadingStrategy], (service: SelectivePreloadingStrategy) => {
     expect(service).toBeTruthy();
   }));
 });

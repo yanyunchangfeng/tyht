@@ -10,7 +10,7 @@ const route:Routes = [
       {path:'visual',loadChildren:'../graph-visual/graph-visual.module#GraphVisualModule',data:{preload:true}},
       {path:'cabient',loadChildren:'../cabient/cabient.module#CabientModule'},
       {path:'form',loadChildren:'../form/form.module#FormModule'},
-      {path:'shadow',loadChildren:'../content-shadow/content-shadow.module#ContentShadowModule'}
+      {path:'shadow',loadChildren:'../content-shadow/content-shadow.module#ContentShadowModule'},
     ]
   }
 ]

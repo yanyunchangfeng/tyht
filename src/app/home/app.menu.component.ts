@@ -51,6 +51,9 @@ export class AppMenuComponent implements OnInit {
           },
           {
             label: 'linkage', icon: 'subject', routerLink: ['./form/linkage']
+          },
+          {
+            label: 'dialog', icon: 'subject', routerLink: ['./form/dialog']
           }
         ]
       },
@@ -62,7 +65,8 @@ export class AppMenuComponent implements OnInit {
           }
 
         ]
-      }
+      },
+
     ];
   }
 

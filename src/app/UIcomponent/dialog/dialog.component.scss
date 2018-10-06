@@ -1,0 +1,142 @@
+@mixin setbutton($backgroundcolor:#333){
+
+  background-color:$backgroundcolor;
+  &:hover {
+    background-color:darken($backgroundcolor,10%);
+  }
+  &:active {
+    background-color:lighten($backgroundcolor,20%);
+  }
+}
+.g-dialog-container {
+  color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .dialog-window{
+    width:15rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    transition: all 0.9s cubic-bezier(0.43, -0.14, 0.34, 1.6);
+    .dialog-header{
+      width: 50px;
+      height: 50px;
+      margin: 0 auto;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &.ok:after{
+        content: '';
+        display: block;
+        width: 30px;
+        height: 10px;
+        border: 2px solid #fff;
+        border-width: 0 0 2px 2px ;
+        transform: rotate(-50deg);
+      }
+      &.warning{
+        transform: rotate(90deg);
+        &:before{
+          content: '';
+          display: block;
+          width: 20px;
+          height: 5px ;
+          background: #fff;
+          margin-right: 5px;
+        }
+        &:after{
+          content: '';
+          display: block;
+          width: 5px;
+          height: 5px ;
+          border-radius: 50%;
+          background: #fff;
+        }
+      }
+      &.waiting{
+        &:before{
+          content: '';
+          display: block;
+          width: 5px;
+          height: 5px ;
+          background: yellow;
+          border-radius: 50%;
+          animation: waiting1 0.8s infinite;
+        }
+        &:after{
+          content: '';
+          display: block;
+          width: 5px;
+          height: 5px ;
+          background: red;
+          border-radius: 50%;
+          animation: waiting2 0.8s infinite;
+        }
+      }
+    }
+    .dialog-content{
+      padding: 1rem 1rem 0;
+      text-align: center;
+    }
+    .dialog-footer{
+      padding: 1rem 1rem 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      button{
+        background: rgba(255, 255, 255, 0.8);
+        border: none;
+        padding: 0.8rem 1.8rem;
+        margin: 0.3rem;
+        text-shadow: #666 1px 1px ;
+        outline: none;
+        border-radius: 5px;
+        color: #eee;
+        &.green{
+          //.setbutton(green);
+          @include setbutton(green);
+        }
+        &.red{
+          //.setbutton(red);
+          @include setbutton(red);
+        }
+        &.blue{
+          //.setbutton(#00ACD6);
+          @include setbutton(#00ACD6);
+        }
+      }
+    }
+  }
+}
+@keyframes waiting1 {
+  0% {
+    transform: translate(-5px 0);
+  }
+  50% {
+    transform: translate(10px, 0);
+  }
+  100% {
+    transform: translate(-5px, 0);
+  }
+}
+@keyframes waiting2 {
+  0% {
+    transform: translate(5px, 0);
+  }
+  50% {
+    transform: translate(-10px, 0);
+  }
+  100% {
+    transform: translate(5px, 0);
+  }
+}
+
