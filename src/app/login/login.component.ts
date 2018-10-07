@@ -3,22 +3,25 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms"
 import {LoginService} from "./login.service"
 import {Router} from "@angular/router";
 import {BasePage} from "../common/base-page";
-import {ConfirmationService, MessageService} from "primeng/api";
+import {MessageService} from "primeng/api";
+import {DialogService} from "xxddialog/components/dialog.service";
+import {FLYIN} from "../animation/fly-in"
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
+  animations:[FLYIN]
 })
 export class LoginComponent extends BasePage implements OnInit {
   loginForm:FormGroup;
   constructor(
     private loginService:LoginService,
     public messageService:MessageService,
-    public confirmationService:ConfirmationService,
+    public dialogService:DialogService,
     private router:Router,
     private fb:FormBuilder
   ) {
-    super(messageService,confirmationService);
+    super(messageService,dialogService);
     this.loginForm = fb.group({
       'name':['',[Validators.required,Validators.minLength(5)]],
       'password':['',[Validators.required,Validators.minLength(6)]]

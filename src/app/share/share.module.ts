@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {FormsModule,ReactiveFormsModule} from "@angular/forms";
 import {EchartDirective} from "../directive/echart.directive";
+import {DialogModule} from "xxddialog/components/dialog.component"
 import {
   DropdownModule,
   InputTextModule,
@@ -9,7 +10,6 @@ import {
   GrowlModule,
   InputTextareaModule,
   ScrollPanelModule,
-  ConfirmDialogModule,
   CardModule
 } from "primeng/primeng";
 @NgModule({
@@ -23,7 +23,7 @@ import {
     ScrollPanelModule,
     GrowlModule,
     CardModule,
-    ConfirmDialogModule,
+    DialogModule,
     InputTextareaModule,
     EchartDirective,
     FormsModule,

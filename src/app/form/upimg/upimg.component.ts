@@ -1,6 +1,7 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {BasePage} from "../../common/base-page";
-import {ConfirmationService, MessageService} from "primeng/api";
+import {MessageService} from "primeng/api";
+import {DialogService} from "xxddialog/components/dialog.service";
 import {DomSanitizer} from "@angular/platform-browser";
 
 @Component({
@@ -15,10 +16,10 @@ export class UpimgComponent extends BasePage implements  OnInit {
   files:File[];
   constructor(
     public message:MessageService,
-    public confirmationService:ConfirmationService,
+    public dialogService:DialogService,
     public sanitizer: DomSanitizer
               ) {
-    super(message,confirmationService)
+    super(message,dialogService);
   }
   ngOnInit() {
     this.files = [];

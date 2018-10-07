@@ -1,6 +1,7 @@
 import {CanDeactivate} from "@angular/router";
 import {FormComponent} from "../form/form.component";
-import {ConfirmationService, MessageService} from "primeng/api"
+import {MessageService} from "primeng/api"
+import {DialogService} from "xxddialog/components/dialog.service";
 import {BasePage} from "../common/base-page";
 import {Injectable} from "@angular/core";
 import {Observable} from "rxjs/index";
@@ -11,9 +12,9 @@ export class UnsavedGuard extends BasePage implements CanDeactivate <FormCompone
 
   constructor(
     public messageService:MessageService,
-    public confirmationService:ConfirmationService
+    public dialogService:DialogService
   ){
-    super(messageService,confirmationService)
+    super(messageService,dialogService)
   }
   canDeactivate(component: FormComponent){
     return this.obsure()
