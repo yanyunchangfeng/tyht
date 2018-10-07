@@ -82,23 +82,23 @@
         border-radius: 5px;
         color: #eee; }
         .g-dialog-container .dialog-window .dialog-footer button.green {
-          background-color: green; }
+          background-color: #0f8f0f; }
           .g-dialog-container .dialog-window .dialog-footer button.green:hover {
-            background-color: #004d00; }
+            background-color: #0a610a; }
           .g-dialog-container .dialog-window .dialog-footer button.green:active {
-            background-color: #00e600; }
+            background-color: #1de71d; }
         .g-dialog-container .dialog-window .dialog-footer button.red {
-          background-color: red; }
+          background-color: #8f0f0f; }
           .g-dialog-container .dialog-window .dialog-footer button.red:hover {
-            background-color: #cc0000; }
+            background-color: #610a0a; }
           .g-dialog-container .dialog-window .dialog-footer button.red:active {
-            background-color: #ff6666; }
+            background-color: #e71d1d; }
         .g-dialog-container .dialog-window .dialog-footer button.blue {
-          background-color: #00ACD6; }
+          background-color: #39b9c6; }
           .g-dialog-container .dialog-window .dialog-footer button.blue:hover {
-            background-color: #0083a3; }
+            background-color: #2e949e; }
           .g-dialog-container .dialog-window .dialog-footer button.blue:active {
-            background-color: #3dd9ff; }
+            background-color: #88d5dd; }
 
 @keyframes waiting1 {
   0% {

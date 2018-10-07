@@ -1,14 +1,13 @@
-<div class="g-dialog-container" *ngIf="visible">
-   <div class="dialog-window">
-     <div ngClass="dialog-header" [class]="styleClass"></div>
-     <div class="dialog-content" [innerHTML]="message"></div>
-     <div class="dialog-footer" *ngIf="footer">
-       <ng-content select="xxd-footer"></ng-content>
-     </div>
-     <div class="dialog-footer" *ngIf="!footer">
-       <button ngClass="red" (click)="accept()">{{okLabel}}</button>
-       <button ngClass="green" (click)="reject()">{{offLabel}}</button>
-     </div>
-   </div>
+<div class="g-dialog-container" *ngIf="visible" [@scale]  [ngStyle]="{'background':'rgba(0,0,0,+'+opacity+')','zIndex':zIndex}">
+  <div class="dialog-window" [style.width.px]="width" [style.height.px]="height">
+    <div [ngClass]="header" class="dialog-header"></div>
+    <div class="dialog-content" [innerHTML]="message"></div>
+    <div class="dialog-footer" *ngIf="footer">
+      <ng-content select="xxd-footer"></ng-content>
+    </div>
+    <div class="dialog-footer" *ngIf="!footer">
+      <button [ngClass]="okButton" (click)="accept()" *ngIf="okVisible">{{okLabel}}</button>
+      <button [ngClass]="offButton" (click)="reject()" *ngIf="offVisible">{{offLabel}}</button>
+    </div>
+  </div>
 </div>
-

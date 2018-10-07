@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-// import {DialogService} from "xxddialog/components/dialog.service"
-import {DialogService} from "../../UIcomponent/dialog/dialog.service";
+import {DialogService} from "xxddialog/components/dialog.service"
+// import {DialogService} from "../../UIcomponent/dialog/dialog.service";
 
 @Component({
   selector: 'app-diademo',
@@ -8,9 +8,25 @@ import {DialogService} from "../../UIcomponent/dialog/dialog.service";
   styleUrls: ['./diademo.component.scss']
 })
 export class DiademoComponent implements OnInit {
-  @Input() styleClass:string = 'waiting'
   constructor(private dialog:DialogService) { }
   ngOnInit() {
-    this.dialog.confirm({message:'ndfsdfsdf'})
+    this.dialog.confirm(
+      {
+        message:'删除成功',
+        header:'ok',
+        okVisible:true,
+        offVisible:true,
+        okButton:'blue',
+        offButton:'green',
+        okLabel:``,
+        offLabel: ``,
+        accept:()=>{
+
+        },
+        reject:()=>{
+
+        }
+      }
+    )
   }
 }

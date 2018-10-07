@@ -103,15 +103,15 @@
         color: #eee;
         &.green{
           //.setbutton(green);
-          @include setbutton(green);
+          @include setbutton(#0f8f0f);
         }
         &.red{
           //.setbutton(red);
-          @include setbutton(red);
+          @include setbutton(#8f0f0f);
         }
         &.blue{
           //.setbutton(#00ACD6);
-          @include setbutton(#00ACD6);
+          @include setbutton(#39b9c6);
         }
       }
     }

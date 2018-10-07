@@ -1,6 +1,6 @@
 {
   "name": "tyht",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -29,7 +29,7 @@
     "primeng": "^6.1.3",
     "rxjs": "^6.0.0",
     "wangeditor": "^3.1.1",
-    "xxddialog": "^0.1.7",
+    "xxddialog": "^0.1.8",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
