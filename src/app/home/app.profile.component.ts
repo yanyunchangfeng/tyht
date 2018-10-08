@@ -35,7 +35,7 @@ import {LoginService} from "../login/login.service";
         </a>
       </li>
       <li role="menuitem">
-        <a class="ripplelink" [attr.tabindex]="!active ? '-1' : null" href='' (click)="logout()">
+        <a class="ripplelink" [attr.tabindex]="!active ? '-1' : null" href='#/login' (click)="logout()">
           <i class="material-icons">power_settings_new</i>
           <span>安全退出</span>
         </a>

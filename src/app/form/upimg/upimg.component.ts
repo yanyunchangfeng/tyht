@@ -1,7 +1,7 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {BasePage} from "../../common/base-page";
 import {MessageService} from "primeng/api";
-import {DialogService} from "xxddialog/components/dialog.service";
+import {DialogService} from "xxddialog/components/index";
 import {DomSanitizer} from "@angular/platform-browser";
 
 @Component({

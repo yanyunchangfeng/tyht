@@ -1,9 +1,9 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "outDir": "",
+    "outDir": "/",
     "baseUrl": "/",
-    "rootDir": "src/app/UIcomponent",
+    "rootDir": "/",
     "sourceMap": true,
     "declaration": true,
     "moduleResolution": "node",
@@ -19,6 +19,6 @@
     ]
   },
   "include": [
-      "mydialog.d.ts"
+      "componets.ts"
   ]
 }

@@ -1,5 +1,5 @@
 import {MessageService} from "primeng/api";
-import {DialogService} from "xxddialog/components/dialog.service"
+import {DialogService} from "xxddialog/components/index"
 export class BasePage{
   constructor(
     public messageService:MessageService,

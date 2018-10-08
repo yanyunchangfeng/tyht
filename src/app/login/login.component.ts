@@ -4,7 +4,7 @@ import {LoginService} from "./login.service"
 import {Router} from "@angular/router";
 import {BasePage} from "../common/base-page";
 import {MessageService} from "primeng/api";
-import {DialogService} from "xxddialog/components/dialog.service";
+import {DialogService} from "xxddialog/components/index";
 import {FLYIN} from "../animation/fly-in"
 @Component({
   selector: 'app-login',

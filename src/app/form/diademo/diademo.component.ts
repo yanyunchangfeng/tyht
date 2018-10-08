@@ -1,7 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {DialogService} from "xxddialog/components/dialog.service"
 // import {DialogService} from "../../UIcomponent/dialog/dialog.service";
-
+import {DialogService} from "xxddialog/components/index"
 @Component({
   selector: 'app-diademo',
   templateUrl: './diademo.component.html',
@@ -12,8 +11,8 @@ export class DiademoComponent implements OnInit {
   ngOnInit() {
     this.dialog.confirm(
       {
-        message:'删除成功',
-        header:'ok',
+        message:'确定要删除吗?',
+        header:'warning',
         okVisible:true,
         offVisible:true,
         okButton:'blue',

@@ -8,10 +8,9 @@ import {WangeditorModule} from "../UIcomponent/wangeditor/wangeditor.module";
 import {LinkageComponent} from "./linkage/linkage.component";
 import {ThreeLinkComponent} from "./three-link/three-link.component"
 import {DiademoComponent } from './diademo/diademo.component'
-import {DialogModule} from "xxddialog/components/dialog.component"
-import {DialogService} from "xxddialog/components/dialog.service"
+import {DialogModule,DialogService} from "xxddialog/components/index"
 //  import {DialogModule} from "../UIcomponent/dialog/dialog.component";
-//  import {DialogService} from "../UIcomponent/dialog/dialog.service";
+ // import {DialogService} from "../UIcomponent/dialog/dialog.service";
 @NgModule({
   imports: [
     ShareModule,

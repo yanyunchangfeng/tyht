@@ -2,8 +2,8 @@
   "compileOnSave": false,
   "compilerOptions": {
     "outDir": "./components",
-    "baseUrl": "src/app/UIcomponent/dialog",
-    "rootDir": "src/app/UIcomponent/dialog",
+    "baseUrl": "src",
+    "rootDir": "src/app/UIcomponent",
     "sourceMap": true,
     "declaration": true,
     "moduleResolution": "node",
@@ -19,6 +19,7 @@
     ]
   },
   "include": [
-      "src/app/UIcomponent/dialog/*"
+      "src/app/UIcomponent/dialog/*",
+      "src/app/UIcomponent/index.ts"
   ]
 }
