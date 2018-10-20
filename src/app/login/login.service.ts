@@ -13,7 +13,7 @@ export class LoginService {
     private storageService:StorageService
   ) { }
   login(loginModel){
-    return this.http.get(`${environment.url}/users/?name=${loginModel.name}&password=${loginModel.password}`).pipe(
+    return this.http.get(`${environment.url}/users`,{params:{'name':loginModel.name,'password':loginModel.password}}).pipe(
       map((res:Response)=>{
         if(res['length']>0){
           this.storageService.setUser('user',res[0]['name']);

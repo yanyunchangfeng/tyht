@@ -6,7 +6,6 @@ import {map} from "rxjs/internal/operators";
   providedIn: 'root'
 })
 export class PublicService {
-
   constructor(private http:HttpClient) { }
   getEquipment(){
     return this.http.get('assets/equipment.json')

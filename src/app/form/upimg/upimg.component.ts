@@ -1,7 +1,8 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {BasePage} from "../../common/base-page";
 import {MessageService} from "primeng/api";
-import {DialogService} from "xxddialog/components/index";
+// import {DialogService} from "xxddialog/components/index";
+// import{DialogService} from "../../UIcomponent/dialog/dialog.service";
 import {DomSanitizer} from "@angular/platform-browser";
 
 @Component({
@@ -16,10 +17,10 @@ export class UpimgComponent extends BasePage implements  OnInit {
   files:File[];
   constructor(
     public message:MessageService,
-    public dialogService:DialogService,
+    // public dialogService:DialogService,
     public sanitizer: DomSanitizer
               ) {
-    super(message,dialogService);
+    super(message);
   }
   ngOnInit() {
     this.files = [];

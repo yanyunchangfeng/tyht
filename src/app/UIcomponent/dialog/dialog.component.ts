@@ -1,11 +1,11 @@
 import {
-  Component, OnDestroy,ContentChild, ElementRef, EventEmitter, Input, NgModule,
+  Component, OnDestroy,ContentChild, OnInit,ElementRef, EventEmitter, Input, NgModule,
   ViewChild
 } from '@angular/core';
 import {animate, query, trigger,} from "@angular/animations"
 import {Footer} from "./footer.component";
 import {DialogService} from "./dialog.service";
-import {Subscription} from "rxjs/index";
+;import {Subscription,timer} from "rxjs";
 import {Dialog} from "./dialog";
 import {CommonModule} from "@angular/common";
 import {transition,style,stagger} from "@angular/animations";
@@ -145,23 +145,23 @@ const css_STYLE = `
     transform: translate(5px, 0); } }
 `;
 @Component({
-  selector: 'xxd-dialog',
+  selector: 'app-xxd-dialog',
   template:HTML_TEMPLATE,
   styles:[css_STYLE],
   animations:[
     trigger('scale',[transition('*<=>*',[
-       query('.dialog-window ',[
+       query('.dialog-window',[
          style({transform:'scale(0,0)'}),
-         stagger('30ms',
-         animate('100ms cubic-bezier(.17,.67,.88,.1)',style({transform:'scale(1,1)'})))
+         stagger('0ms',
+         animate('100ms cubic-bezier(0.43, -0.14, 0.34, 1.6)',style({transform:'scale(1,1)'})))
        ],{optional:true}),
-       query(':leave',[
+       query('.dialog-window',[
           animate('100ms',style({transform:'scale(0,0)'}))
       ],{optional:true})
     ])])
   ]
 })
-export class DialogComponent implements OnDestroy{
+export class DialogComponent implements OnDestroy,OnInit{
   @Input() header = 'waiting';
   @Input() key;
   @Input() width = "auto";
@@ -184,7 +184,29 @@ export class DialogComponent implements OnDestroy{
   constructor(
     private dialogService:DialogService
   ) {
-    this.subscription = dialogService.requireDialogSource$.subscribe(dialog=>{
+    
+  }
+  accept() {
+    if(this.dialog.acceptEvent) {
+      this.dialog.acceptEvent.emit();
+    }else{
+      this.hide();
+      this.dialog = null;
+    }
+  }
+  reject() {
+    if(this.dialog.rejectEvent) {
+      this.dialog.rejectEvent.emit();
+    }else{
+      this.hide();
+      this.dialog = null;
+    }
+  }
+  hide() {
+    this.visible = false;
+  }
+  ngOnInit(){
+    this.subscription = this.dialogService.requireDialogSource$.subscribe(dialog=>{
       if(dialog.key == this.key){
         this.dialog = dialog;
         this.message = this.dialog.message||this.message;
@@ -216,33 +238,16 @@ export class DialogComponent implements OnDestroy{
           );
         }
         if(this.delay&&this.delay!=0){
-          setTimeout(()=>{this.visible = false},this.delay)
+          timer(this.delay).subscribe(val => this.visible = false);
         }
-        this.visible = true
+        this.visible = true;
       }
-    })
-  }
-  accept() {
-    if(this.dialog.acceptEvent) {
-      this.dialog.acceptEvent.emit();
-    }else{
-      this.hide();
-      this.dialog = null;
-    }
-  }
-  reject() {
-    if(this.dialog.rejectEvent) {
-      this.dialog.rejectEvent.emit();
-    }else{
-      this.hide();
-      this.dialog = null;
-    }
-  }
-  hide() {
-    this.visible = false;
+    });
   }
   ngOnDestroy(){
-    this.subscription.unsubscribe();
+    if(this.subscription){
+      this.subscription.unsubscribe();
+    }
   }
 }
 @NgModule({

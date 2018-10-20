@@ -1,14 +1,15 @@
 {
   "name": "tyht",
-  "version": "0.2.5",
+  "version": "0.2.7",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --prod",
+    "start": "concurrently \"ng serve --port 4202 -o\"  \"npm run serve\" ",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "serve": "json-server mock/data.json --watch",
     "ts": "ngc -p index.ts",
     "bundle": "ngc -p tsconfig-release.json",
     "bundle1": "ngc -p tsconfig-aot.json"
@@ -31,7 +32,7 @@
     "rxjs": "^6.0.0",
     "testxxddialog": "0.0.5",
     "wangeditor": "^3.1.1",
-    "xxddialog": "^0.2.5",
+    "xxddialog": "^0.2.7",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {

@@ -1,9 +1,10 @@
 import {MessageService} from "primeng/api";
-import {DialogService} from "xxddialog/components/index"
+// import {DialogService} from "xxddialog/components/index";
+// import{DialogService} from "../UIcomponent/dialog/dialog.service";
 export class BasePage{
   constructor(
     public messageService:MessageService,
-    public dialogService:DialogService
+    // public dialogService:DialogService
   ){
   }
   alert(type='success',summary='Error Message',msg){
@@ -17,19 +18,19 @@ export class BasePage{
     this.alert('error','ErrorMessage',err['message']);
   }
   confirm(msg,acccallback?,rejcallback?){
-    this.dialogService.confirm({
-     message:msg,
-     header:'warning',
-     accept:()=>{
-       if(acccallback&&typeof acccallback =='function'){
-         acccallback()
-       }
-     },
-     reject:()=>{
-       if(rejcallback&&typeof rejcallback =='function'){
-         rejcallback()
-       }
-     }
-   })
+  //   this.dialogService.confirm({
+  //    message:msg,
+  //    header:'warning',
+  //    accept:()=>{
+  //      if(acccallback&&typeof acccallback =='function'){
+  //        acccallback()
+  //      }
+  //    },
+  //    reject:()=>{
+  //      if(rejcallback&&typeof rejcallback =='function'){
+  //        rejcallback()
+  //      }
+  //    }
+  //  })
   }
 }

@@ -4,7 +4,8 @@ import {LoginService} from "./login.service"
 import {Router} from "@angular/router";
 import {BasePage} from "../common/base-page";
 import {MessageService} from "primeng/api";
-import {DialogService} from "xxddialog/components/index";
+// import {DialogService} from "xxddialog/components/index";
+// import{DialogService} from "../UIcomponent/dialog/dialog.service";
 import {FLYIN} from "../animation/fly-in"
 @Component({
   selector: 'app-login',
@@ -17,11 +18,11 @@ export class LoginComponent extends BasePage implements OnInit {
   constructor(
     private loginService:LoginService,
     public messageService:MessageService,
-    public dialogService:DialogService,
+    // public dialogService:DialogService,
     private router:Router,
     private fb:FormBuilder
   ) {
-    super(messageService,dialogService);
+    super(messageService);
     this.loginForm = fb.group({
       'name':['',[Validators.required,Validators.minLength(5)]],
       'password':['',[Validators.required,Validators.minLength(6)]]

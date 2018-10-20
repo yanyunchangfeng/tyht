@@ -18,9 +18,27 @@ export class DiademoComponent implements OnInit {
         okButton:'blue',
         offButton:'green',
         okLabel:``,
+        key:"1",
         offLabel: ``,
         accept:()=>{
+              this.dialog.confirm({
+                message:'第二个弹框?',
+                header:'warning',
+                okVisible:true,
+                offVisible:true,
+                okButton:'blue',
+                offButton:'green',
+                okLabel:``,
+                key:"2",
+                delay:3000,
+                offLabel: ``,
+                accept:()=>{
 
+                },
+                reject:()=>{
+
+                }
+              })
         },
         reject:()=>{
 
