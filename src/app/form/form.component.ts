@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,OnDestroy} from '@angular/core';
 import {FormBuilder,FormGroup,Validators} from "@angular/forms";
 import {phoneValidator,phoneAsyncValidator,equalValidator} from "../validator/validators"
 @Component({
@@ -6,7 +6,7 @@ import {phoneValidator,phoneAsyncValidator,equalValidator} from "../validator/va
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss']
 })
-export class FormComponent implements OnInit {
+export class FormComponent implements OnInit,OnDestroy {
   myform:FormGroup;
   constructor( fb:FormBuilder) {
    this.myform= fb.group({
@@ -26,6 +26,9 @@ export class FormComponent implements OnInit {
   }
   submit({value,valid},ev:Event){
     console.log(this.myform)
-    console.log(value,valid)
+    console.log(value,valid)  
+  }
+  ngOnDestroy(){
+    // alert('111');
   }
 }

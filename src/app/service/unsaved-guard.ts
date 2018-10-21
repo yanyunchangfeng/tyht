@@ -1,21 +1,19 @@
 import {CanDeactivate} from "@angular/router";
 import {FormComponent} from "../form/form.component";
-import {MessageService} from "primeng/api"
-// import {DialogService} from "xxddialog/components/index";
+import {DialogService} from "xxddialog/components/index";
 // import{DialogService} from "../UIcomponent/dialog/dialog.service";
 import {BasePage} from "../common/base-page";
 import {Injectable} from "@angular/core";
-import {Observable} from "rxjs/index";
+import {Observable} from "rxjs";
 @Injectable({
   providedIn: 'root'
 })
 export class UnsavedGuard extends BasePage implements CanDeactivate <FormComponent>{
 
   constructor(
-    public messageService:MessageService,
-    // public dialogService:DialogService
+    public dialogService:DialogService
   ){
-    super(messageService)
+    super(dialogService)
   }
   canDeactivate(component: FormComponent){
     return this.obsure()

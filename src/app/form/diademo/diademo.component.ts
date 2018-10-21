@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 // import {DialogService} from "../../UIcomponent/dialog/dialog.service";
 import {DialogService} from "xxddialog/components/index"
+import {timer} from "rxjs";
 @Component({
   selector: 'app-diademo',
   templateUrl: './diademo.component.html',
@@ -9,7 +10,7 @@ import {DialogService} from "xxddialog/components/index"
 export class DiademoComponent implements OnInit {
   constructor(private dialog:DialogService) { }
   ngOnInit() {
-    this.dialog.confirm(
+   let  dia= this.dialog.confirm(
       {
         message:'确定要删除吗?',
         header:'warning',
@@ -44,6 +45,8 @@ export class DiademoComponent implements OnInit {
 
         }
       }
-    )
+    );
+    // dia.close();
+   timer(3000).subscribe(val => dia.close());
   }
 }

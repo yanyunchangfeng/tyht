@@ -1,7 +1,6 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {BasePage} from "../../common/base-page";
-import {MessageService} from "primeng/api";
-// import {DialogService} from "xxddialog/components/index";
+import {DialogService} from "xxddialog/components/index";
 // import{DialogService} from "../../UIcomponent/dialog/dialog.service";
 import {DomSanitizer} from "@angular/platform-browser";
 
@@ -16,11 +15,10 @@ export class UpimgComponent extends BasePage implements  OnInit {
   src;
   files:File[];
   constructor(
-    public message:MessageService,
-    // public dialogService:DialogService,
+    public dialogService:DialogService,
     public sanitizer: DomSanitizer
               ) {
-    super(message);
+    super(dialogService);
   }
   ngOnInit() {
     this.files = [];
@@ -70,11 +68,11 @@ export class UpimgComponent extends BasePage implements  OnInit {
   }
   validate(file:File):boolean{
      if(this.upfile.nativeElement.accept&&!this.isFileType(file)){
-       this.alert('error','失效的文件内型',file.name);
+       this.warn('失效的文件内型'+file.name);
        return false
      }
      if(this.upfile.nativeElement.maxFileSize&&file.size>this.upfile.nativeElement.maxFileSize){
-       this.alert('error','失效的文件大小',file.size);
+       this.warn('失效的文件大小'+ file.size);
        return false
      }
      return true

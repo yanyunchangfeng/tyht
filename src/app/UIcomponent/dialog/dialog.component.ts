@@ -11,7 +11,8 @@ import {CommonModule} from "@angular/common";
 import {transition,style,stagger} from "@angular/animations";
 const HTML_TEMPLATE = `
 <div class="g-dialog-container" *ngIf="visible" [@scale]  [ngStyle]="{'background':'rgba(0,0,0,+'+opacity+')','zIndex':zIndex}">
-      <div class="dialog-window" [style.width.px]="width" [style.height.px]="height">
+      <div class="overlay" (click)="hide()" *ngIf="!(dialog.accept&&dialog.reject)"></div>
+      <div class="dialog-window" [style.width.px]="width" [style.height.px]="height" [ngStyle]="{'zIndex':zIndex}">
         <div [ngClass]="header" class="dialog-header"></div>
         <div class="dialog-content" [innerHTML]="message"></div>
         <div class="dialog-footer" *ngIf="footer">
@@ -143,6 +144,14 @@ const css_STYLE = `
     transform: translate(-10px, 0); }
   100% {
     transform: translate(5px, 0); } }
+    .overlay{
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      z-index:9999;
+    }
 `;
 @Component({
   selector: 'app-xxd-dialog',
@@ -205,8 +214,12 @@ export class DialogComponent implements OnDestroy,OnInit{
   hide() {
     this.visible = false;
   }
-  ngOnInit(){
+  ngOnInit() {
     this.subscription = this.dialogService.requireDialogSource$.subscribe(dialog=>{
+      if (dialog == null) {
+        this.hide();
+        return;
+      }
       if(dialog.key == this.key){
         this.dialog = dialog;
         this.message = this.dialog.message||this.message;
@@ -256,5 +269,5 @@ export class DialogComponent implements OnDestroy,OnInit{
   exports:[DialogComponent,Footer]
 })
 export class DialogModule{
-
+    
 }

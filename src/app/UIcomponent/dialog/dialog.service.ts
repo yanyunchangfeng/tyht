@@ -12,4 +12,7 @@ export class DialogService{
     this.requireDialogSource.next(dialog);
     return this;
   }
+  close() {
+    this.requireDialogSource.next(null);
+  }
 }

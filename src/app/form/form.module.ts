@@ -7,18 +7,14 @@ import { EditorComponent } from './editor/editor.component';
 import {WangeditorModule} from "../UIcomponent/wangeditor/wangeditor.module";
 import {LinkageComponent} from "./linkage/linkage.component";
 import {ThreeLinkComponent} from "./three-link/three-link.component"
-import {DiademoComponent } from './diademo/diademo.component'
-import {DialogModule, DialogService} from "xxddialog/components/index"
-//  import {DialogModule} from "../UIcomponent/dialog/dialog.component";
-//  import {DialogService} from "../UIcomponent/dialog/dialog.service";
+import {DiademoComponent } from './diademo/diademo.component';
+
 @NgModule({
   imports: [
     ShareModule,
-    DialogModule,
     WangeditorModule,
     FormRoutingModule
   ],
-  declarations: [FormComponent, UpimgComponent, EditorComponent,LinkageComponent,ThreeLinkComponent, DiademoComponent],
-  providers:[DialogService]
+  declarations: [FormComponent, UpimgComponent, EditorComponent,LinkageComponent,ThreeLinkComponent, DiademoComponent]
 })
 export class FormModule { }
