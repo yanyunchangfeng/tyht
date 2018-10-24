@@ -25,8 +25,8 @@ export class FormComponent implements OnInit,OnDestroy {
     console.log(this.myform)
   }
   submit({value,valid},ev:Event){
-    console.log(this.myform)
-    console.log(value,valid)  
+    console.log(this.myform);
+    console.log(value,valid);  
   }
   ngOnDestroy(){
     // alert('111');
