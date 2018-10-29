@@ -1,4 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, HostListener } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 // import {DialogService} from "../../UIcomponent/dialog/dialog.service";
 import {DialogService} from "xxddialog/components/index"
 import {timer} from "rxjs";
@@ -8,7 +9,15 @@ import {timer} from "rxjs";
   styleUrls: ['./diademo.component.scss']
 })
 export class DiademoComponent implements OnInit {
-  constructor(private dialog:DialogService) { }
+  left = 0;
+  top = 0;
+  startX;
+  startY;
+  dropsrc = '';
+  constructor(
+    private dialog: DialogService,
+    private si: DomSanitizer
+    ) { }
   ngOnInit() {
    let  dia= this.dialog.confirm(
       {
@@ -46,7 +55,71 @@ export class DiademoComponent implements OnInit {
         }
       }
     );
-    // dia.close();
    timer(3000).subscribe(val => dia.close());
+  }
+  @HostListener('document:dragover', ['$event'])
+  documentonDragOver(e) {
+  }
+  onDragStart(ev:Event) {
+     console.log(ev);
+     
+     this.startX  = ev.offsetX;// 刚要移动鼠标时相对于图片的偏移量
+     this.startY  = ev.offsetY;
+  }
+  onDrag(ev: Event) {
+    
+          // this.rd.setProperty(ev, 'dataTransfer.effectAllowed', 'all');
+          // this.rd.setProperty(ev, 'dataTransfer.dropEffect', 'move');
+     let x = ev.pageX ;// 拖动在整个页面的坐标：
+     let y = ev.pageY ;
+     if ( x === 0 && y === 0) {return; }
+     x -= this.startX;
+     y -= this.startY;
+     x -= 266;
+     y -= 133;
+     this.left = x;
+     this.top = y;
+  }
+  onDragEnd(ev: Event) {
+  }
+  onDragEnter(ev: Event) {
+  }
+  onDragOver(ev:Event) {
+    ev.preventDefault();
+    // 阻止dragover触发默认时间dragleave
+  }
+  onDragLeave(ev:Event) {
+    console.log('leave');
+  }
+  onDrop(ev: Event){
+    console.log('drop');
+    ev.preventDefault();
+  }
+  @HostListener('document:dragover', ['$event'])
+  ondocumentDragOver(ev: Event) {
+    // 阻止dragover的默认行为: 继续触发dragleave事件;
+
+  }
+  @HostListener('document:drop', ['$event'])
+  ondocumentDrop(ev: Event) {
+    // 阻止document的drop事件默认行为：在新窗口中打开拖进来的图片
+     ev.preventDefault();
+
+  }
+  // 拖放的源对象-客户端的一张图片无法做事件绑定
+  containerOnDragOver(ev: Event) {
+    ev.preventDefault();
+  }
+  containerDrop(ev: Event) {
+    ev.preventDefault();
+    // 注意chrome里面的files.length：0，其实不是0!!
+    const f0 = ev.dataTransfer.files[0];
+    this.dropsrc = this.si.bypassSecurityTrustUrl(window.URL.createObjectURL(f0)) as any;
+    // const reader = new FileReader();
+    // reader.readAsDataURL(f0);
+    // reader.onload = () => {
+    //    this.dropsrc = reader.result as any;
+    // };
+
   }
 }

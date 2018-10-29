@@ -1,2 +1,9 @@
 <xxd-dialog [key]="'1'"></xxd-dialog>
 <xxd-dialog [key]="'2'"></xxd-dialog>
+<img src="assets/img/ym.jpg" width="100" (dragstart)="onDragStart($event)" (drag)="onDrag($event)" (dragend)="onDragEnd($event)" [ngStyle]="{'left.px':left,'top.px':top}">
+<div (dragenter)="onDragEnter($event)" (dragover)="onDragOver($event)" (dragleave)="onDragLeave($event)" (drop)="onDrop($event)" class="imgContainer">
+    <img src="assets/img/trash.jpg" width="100">
+</div>
+<div id="container" (dragover)="containerOnDragOver($event)" (drop)="containerDrop($event)">
+    <img [src]="dropsrc" alt="" *ngIf="dropsrc" width="500">
+</div>
