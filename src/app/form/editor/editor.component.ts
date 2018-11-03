@@ -78,3 +78,11 @@ export class EditorComponent implements OnInit {
     }
   }
 }
+// Function.prototype.bind = function(obj) {
+//   let fun  = this;
+//   let args1 = [].slice.call(arguments, 1);
+//   return function(){
+//       let args2 = [].slice.call(arguments);
+//      fun.apply(obj,args1.concat(args2));
+//   }
+// }

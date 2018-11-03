@@ -154,7 +154,7 @@ const css_STYLE = `
     }
 `;
 @Component({
-  selector: 'app-xxd-dialog',
+  selector: 'xxd-dialog',
   template:HTML_TEMPLATE,
   styles:[css_STYLE],
   animations:[

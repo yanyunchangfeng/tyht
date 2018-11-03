@@ -40,7 +40,7 @@ export class DiademoComponent implements OnInit {
                 offButton:'green',
                 okLabel:``,
                 key:"2",
-                delay:3000,
+                // delay:3000,
                 offLabel: ``,
                 accept:()=>{
 
@@ -55,22 +55,20 @@ export class DiademoComponent implements OnInit {
         }
       }
     );
-   timer(3000).subscribe(val => dia.close());
+  //  timer(3000).subscribe(val => dia.close());
   }
   @HostListener('document:dragover', ['$event'])
   documentonDragOver(e) {
   }
-  onDragStart(ev:Event) {
+  onDragStart(ev:MouseEvent) {
      console.log(ev);
-     
      this.startX  = ev.offsetX;// 刚要移动鼠标时相对于图片的偏移量
      this.startY  = ev.offsetY;
   }
-  onDrag(ev: Event) {
-    
+  onDrag(ev: MouseEvent) {
           // this.rd.setProperty(ev, 'dataTransfer.effectAllowed', 'all');
           // this.rd.setProperty(ev, 'dataTransfer.dropEffect', 'move');
-     let x = ev.pageX ;// 拖动在整个页面的坐标：
+     let x = ev.pageX ; // 拖动在整个页面的坐标：
      let y = ev.pageY ;
      if ( x === 0 && y === 0) {return; }
      x -= this.startX;
@@ -80,37 +78,37 @@ export class DiademoComponent implements OnInit {
      this.left = x;
      this.top = y;
   }
-  onDragEnd(ev: Event) {
+  onDragEnd(ev: MouseEvent) {
   }
-  onDragEnter(ev: Event) {
+  onDragEnter(ev: MouseEvent) {
   }
-  onDragOver(ev:Event) {
+  onDragOver(ev:MouseEvent) {
     ev.preventDefault();
     // 阻止dragover触发默认时间dragleave
   }
-  onDragLeave(ev:Event) {
+  onDragLeave(ev:MouseEvent) {
     console.log('leave');
   }
-  onDrop(ev: Event){
+  onDrop(ev: MouseEvent){
     console.log('drop');
     ev.preventDefault();
   }
   @HostListener('document:dragover', ['$event'])
-  ondocumentDragOver(ev: Event) {
+  ondocumentDragOver(ev: MouseEvent) {
     // 阻止dragover的默认行为: 继续触发dragleave事件;
 
   }
   @HostListener('document:drop', ['$event'])
-  ondocumentDrop(ev: Event) {
+  ondocumentDrop(ev: MouseEvent) {
     // 阻止document的drop事件默认行为：在新窗口中打开拖进来的图片
      ev.preventDefault();
 
   }
   // 拖放的源对象-客户端的一张图片无法做事件绑定
-  containerOnDragOver(ev: Event) {
+  containerOnDragOver(ev: MouseEvent) {
     ev.preventDefault();
   }
-  containerDrop(ev: Event) {
+  containerDrop(ev: DragEvent ) {
     ev.preventDefault();
     // 注意chrome里面的files.length：0，其实不是0!!
     const f0 = ev.dataTransfer.files[0];
