@@ -1,7 +1,7 @@
 import {CanDeactivate} from "@angular/router";
 import {FormComponent} from "../form/form.component";
-import {DialogService} from "xxddialog/components/index";
-// import{DialogService} from "../UIcomponent/dialog/dialog.service";
+// import {DialogService} from "xxddialog/components/index";
+import{DialogService} from "../UIcomponent/dialog/dialog.service";
 import {BasePage} from "../common/base-page";
 import {Injectable} from "@angular/core";
 import {Observable} from "rxjs";

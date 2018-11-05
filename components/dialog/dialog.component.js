@@ -1,4 +1,13 @@
 "use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var animations_1 = require("@angular/animations");
@@ -93,60 +102,106 @@ var DialogComponent = /** @class */ (function () {
             this.subscription.unsubscribe();
         }
     };
-    DialogComponent.decorators = [
-        { type: core_1.Component, args: [{
-                    selector: 'xxd-dialog',
-                    template: HTML_TEMPLATE,
-                    styles: [css_STYLE],
-                    animations: [
-                        animations_1.trigger('scale', [animations_2.transition('*<=>*', [
-                                animations_1.query('.dialog-window', [
-                                    animations_2.style({ transform: 'scale(0,0)' }),
-                                    animations_2.stagger('0ms', animations_1.animate('100ms cubic-bezier(0.43, -0.14, 0.34, 1.6)', animations_2.style({ transform: 'scale(1,1)' })))
-                                ], { optional: true }),
-                                animations_1.query('.dialog-window', [
-                                    animations_1.animate('100ms', animations_2.style({ transform: 'scale(0,0)' }))
-                                ], { optional: true })
-                            ])])
-                    ]
-                },] },
-    ];
-    /** @nocollapse */
-    DialogComponent.ctorParameters = function () { return [
-        { type: dialog_service_1.DialogService }
-    ]; };
-    DialogComponent.propDecorators = {
-        header: [{ type: core_1.Input }],
-        key: [{ type: core_1.Input }],
-        width: [{ type: core_1.Input }],
-        height: [{ type: core_1.Input }],
-        opacity: [{ type: core_1.Input }],
-        message: [{ type: core_1.Input }],
-        okLabel: [{ type: core_1.Input }],
-        offLabel: [{ type: core_1.Input }],
-        zIndex: [{ type: core_1.Input }],
-        okVisible: [{ type: core_1.Input }],
-        offVisible: [{ type: core_1.Input }],
-        okButton: [{ type: core_1.Input }],
-        offButton: [{ type: core_1.Input }],
-        visible: [{ type: core_1.Input }],
-        delay: [{ type: core_1.Input }],
-        mask: [{ type: core_1.ViewChild, args: ['mask',] }],
-        footer: [{ type: core_1.ContentChild, args: [footer_component_1.Footer,] }]
-    };
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Object)
+    ], DialogComponent.prototype, "header", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Object)
+    ], DialogComponent.prototype, "key", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Object)
+    ], DialogComponent.prototype, "width", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Object)
+    ], DialogComponent.prototype, "height", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Object)
+    ], DialogComponent.prototype, "opacity", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Object)
+    ], DialogComponent.prototype, "message", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Object)
+    ], DialogComponent.prototype, "okLabel", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Object)
+    ], DialogComponent.prototype, "offLabel", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Number)
+    ], DialogComponent.prototype, "zIndex", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Object)
+    ], DialogComponent.prototype, "okVisible", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Object)
+    ], DialogComponent.prototype, "offVisible", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Object)
+    ], DialogComponent.prototype, "okButton", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Object)
+    ], DialogComponent.prototype, "offButton", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Object)
+    ], DialogComponent.prototype, "visible", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Number)
+    ], DialogComponent.prototype, "delay", void 0);
+    __decorate([
+        core_1.ViewChild('mask'),
+        __metadata("design:type", core_1.ElementRef)
+    ], DialogComponent.prototype, "mask", void 0);
+    __decorate([
+        core_1.ContentChild(footer_component_1.Footer),
+        __metadata("design:type", Object)
+    ], DialogComponent.prototype, "footer", void 0);
+    DialogComponent = __decorate([
+        core_1.Component({
+            selector: 'xxd-dialog',
+            template: HTML_TEMPLATE,
+            styles: [css_STYLE],
+            animations: [
+                animations_1.trigger('scale', [animations_2.transition('*<=>*', [
+                        animations_1.query('.dialog-window', [
+                            animations_2.style({ transform: 'scale(0,0)' }),
+                            animations_2.stagger('0ms', animations_1.animate('100ms cubic-bezier(0.43, -0.14, 0.34, 1.6)', animations_2.style({ transform: 'scale(1,1)' })))
+                        ], { optional: true }),
+                        animations_1.query('.dialog-window', [
+                            animations_1.animate('100ms', animations_2.style({ transform: 'scale(0,0)' }))
+                        ], { optional: true })
+                    ])])
+            ]
+        }),
+        __metadata("design:paramtypes", [dialog_service_1.DialogService])
+    ], DialogComponent);
     return DialogComponent;
 }());
 exports.DialogComponent = DialogComponent;
 var DialogModule = /** @class */ (function () {
     function DialogModule() {
     }
-    DialogModule.decorators = [
-        { type: core_1.NgModule, args: [{
-                    imports: [common_1.CommonModule],
-                    declarations: [DialogComponent, footer_component_1.Footer],
-                    exports: [DialogComponent, footer_component_1.Footer]
-                },] },
-    ];
+    DialogModule = __decorate([
+        core_1.NgModule({
+            imports: [common_1.CommonModule],
+            declarations: [DialogComponent, footer_component_1.Footer],
+            exports: [DialogComponent, footer_component_1.Footer]
+        })
+    ], DialogModule);
     return DialogModule;
 }());
 exports.DialogModule = DialogModule;

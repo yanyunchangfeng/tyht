@@ -1,6 +1,6 @@
 
-import {DialogService} from "xxddialog/components/index";
-// import{DialogService} from "../UIcomponent/dialog/dialog.service";
+// import {DialogService} from "xxddialog/components/index";
+import{DialogService} from "../UIcomponent/dialog/dialog.service";
 export class BasePage{
   loadingInstance:any;
   constructor(public dialogService:DialogService){}

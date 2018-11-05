@@ -3,8 +3,8 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms"
 import {LoginService} from "./login.service"
 import {Router} from "@angular/router";
 import {BasePage} from "../common/base-page";
-import {DialogService} from "xxddialog/components/index";
-// import{DialogService} from "../UIcomponent/dialog/dialog.service";
+// import {DialogService} from "xxddialog/components/index";
+import{DialogService} from "../UIcomponent/dialog/dialog.service";
 import {FLYIN} from "../animation/fly-in"
 @Component({
   selector: 'app-login',

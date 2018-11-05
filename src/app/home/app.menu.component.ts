@@ -66,6 +66,15 @@ export class AppMenuComponent implements OnInit {
 
         ]
       },
+      {
+        label: 'HTML5', icon: 'settings',
+        items: [
+          {
+            label: '内容', icon: 'subject', routerLink: ['./shadow']
+          }
+
+        ]
+      },
 
     ];
   }

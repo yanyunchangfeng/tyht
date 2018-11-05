@@ -19,5 +19,42 @@
       </div>
     </div>
   </app-root>
+
+  <script>
+     var arr  = [
+       {
+         name:'xxd',
+         age:18
+       },
+       {
+         name:'lst',
+         age:18
+       },
+       {
+         name:'wgj',
+         age:18
+       },
+     ]  
+     var newarr  = [
+       {
+         name:'s',
+         age:18
+       },
+       {
+         name:'l',
+         age:18
+       },
+       {
+         name:'w',
+         age:18
+       },
+     ]  
+     var str = JSON.stringify(arr);
+     var newstr = JSON.stringify(newarr);
+     if(str !== newarr){
+      //  alert('不相等')
+     }
+     console.log(str)
+  </script>
 </body>
 </html>

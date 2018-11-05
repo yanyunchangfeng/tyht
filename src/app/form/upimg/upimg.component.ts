@@ -1,7 +1,7 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {BasePage} from "../../common/base-page";
-import {DialogService} from "xxddialog/components/index";
-// import{DialogService} from "../../UIcomponent/dialog/dialog.service";
+// import {DialogService} from "xxddialog/components/index";
+import{DialogService} from "../../UIcomponent/dialog/dialog.service";
 import {DomSanitizer} from "@angular/platform-browser";
 
 @Component({

@@ -1,7 +1,7 @@
 import {Component, Input, OnInit, HostListener } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-// import {DialogService} from "../../UIcomponent/dialog/dialog.service";
-import {DialogService} from "xxddialog/components/index"
+import {DialogService} from "../../UIcomponent/dialog/dialog.service";
+// import {DialogService} from "xxddialog/components/index"
 import {timer} from "rxjs";
 @Component({
   selector: 'app-diademo',
