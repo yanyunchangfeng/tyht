@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Tyht</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets/theme/theme-default.css">
+  <link rel="stylesheet" href="assets/layout/css/layout-default.css">
+</head>
+<body>
+  <app-root>
+    <div class="splash-screen">
+      <div class="splash-loader-container">
+        <svg class="splash-loader" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+          <circle class="splash-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+        </svg>
+      </div>
+    </div>
+  </app-root>
+
+  <script>
+     var arr  = [
+       {
+         name:'xxd',
+         age:18
+       },
+       {
+         name:'lst',
+         age:18
+       },
+       {
+         name:'wgj',
+         age:18
+       },
+     ]  
+     var newarr  = [
+       {
+         name:'s',
+         age:18
+       },
+       {
+         name:'l',
+         age:18
+       },
+       {
+         name:'w',
+         age:18
+       },
+     ]  
+     var str = JSON.stringify(arr);
+     var newstr = JSON.stringify(newarr);
+     if(str !== newarr){
+      //  alert('不相等')
+     }
+     console.log(str)
+  </script>
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>
