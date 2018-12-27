@@ -7,7 +7,7 @@
       <input pInputText  formControlName="phone" [class.hasError]="myform.get('phone').invalid&&!myform.get('phone').pristine"/>
       <!-- hidden方法一-->
       <!--
-        <div [hidden]="myform.get('phone').valid||myform.get('phone').untouched">
+        <div [hidden]="myform.get('phone').valid||myform.get('phone').untouched">—
           <div [hidden]="!myform.hasError('phone','phone')">{{myform.getError('phone','phone')?.descxx}}</div>
         </div>
         -->

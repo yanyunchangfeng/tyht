@@ -1,4 +1,4 @@
-<ul>
+‚<ul>
   <li *ngFor="let obj of equipmentArrs.reverse()" [ngStyle]="{'background-color':!obj.id?'#fff':'transparent'}">
     <b *ngIf="obj.isEnd||!obj.status" [ngClass]="{'empty': !obj.status , 'dang': obj.status == '警告', 'book': obj.status == '预定','normal': obj.status == '在线'}"></b><span>{{obj.index}}</span>
     <img *ngIf="obj.isEnd" [ngStyle]="{'height.px':obj.size*20,'width':'100%'}"  src="assets/img/u.png">
