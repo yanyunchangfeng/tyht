@@ -10,13 +10,9 @@ Run `ng generate component component-name` to generate a new component. You can 
 ### Screenshots
 
 <img src="./src/assets/img/login.png">
-
 <img src="./src/assets/img/echarts.png">
-
 <img src="./src/assets/img/cabient.png">
-
 <img src="./src/assets/img/xxdcusdia.png">
-
 
 ## Build
 
