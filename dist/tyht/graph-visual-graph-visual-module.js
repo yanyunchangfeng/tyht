@@ -102,7 +102,7 @@ module.exports = "<div class=\"ui-g\">\n  <div class=\"ui-g-6 ui-sm-12\">\n    <
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".echarts-style {\n  width: 100%;\n  height: 400px;\n  float: left; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi93ZWJwcm9qZWN0L3R5aHQvc3JjL2FwcC9ncmFwaC12aXN1YWwvdmlzdWFsL3Zpc3VhbC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFlBQVc7RUFDWCxjQUFZO0VBQ1osWUFBVyxFQUNaIiwiZmlsZSI6InNyYy9hcHAvZ3JhcGgtdmlzdWFsL3Zpc3VhbC92aXN1YWwuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZWNoYXJ0cy1zdHlsZXtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDo0MDBweDtcbiAgZmxvYXQ6IGxlZnQ7XG59XG4iXX0= */"
+module.exports = ".echarts-style {\n  width: 100%;\n  height: 400px;\n  float: left; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi93ZWJwcm9qZWN0L2FuZ3VsYXIvdHlodC9zcmMvYXBwL2dyYXBoLXZpc3VhbC92aXN1YWwvdmlzdWFsLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBVztFQUNYLGNBQVk7RUFDWixZQUFXLEVBQ1oiLCJmaWxlIjoic3JjL2FwcC9ncmFwaC12aXN1YWwvdmlzdWFsL3Zpc3VhbC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5lY2hhcnRzLXN0eWxle1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OjQwMHB4O1xuICBmbG9hdDogbGVmdDtcbn1cbiJdfQ== */"
 
 /***/ }),
 
@@ -141,7 +141,7 @@ var VisualComponent = /** @class */ (function () {
         this.charType = {
             tooltip: {
                 trigger: 'item',
-                formatter: "{a} <br/>{b}: {c} ({d}%)"
+                formatter: '{a} <br/>{b}: {c} ({d}%)'
             },
             legend: {
                 orient: 'vertical',
@@ -183,7 +183,146 @@ var VisualComponent = /** @class */ (function () {
             ]
         };
         this.nameList = [
-            '赵', '钱', '孙', '李', '周', '吴', '郑', '王', '冯', '陈', '褚', '卫', '蒋', '沈', '韩', '杨', '朱', '秦', '尤', '许', '何', '吕', '施', '张', '孔', '曹', '严', '华', '金', '魏', '陶', '姜', '戚', '谢', '邹', '喻', '柏', '水', '窦', '章', '云', '苏', '潘', '葛', '奚', '范', '彭', '郎', '鲁', '韦', '昌', '马', '苗', '凤', '花', '方', '俞', '任', '袁', '柳', '酆', '鲍', '史', '唐', '费', '廉', '岑', '薛', '雷', '贺', '倪', '汤', '滕', '殷', '罗', '毕', '郝', '邬', '安', '常', '乐', '于', '时', '傅', '皮', '卞', '齐', '康', '伍', '余', '元', '卜', '顾', '孟', '平', '黄', '和', '穆', '萧', '尹', '姚', '邵', '湛', '汪', '祁', '毛', '禹', '狄', '米', '贝', '明', '臧', '计', '伏', '成', '戴', '谈', '宋', '茅', '庞', '熊', '纪', '舒', '屈', '项', '祝', '董', '梁', '杜', '阮', '蓝', '闵', '席', '季', '麻', '强', '贾', '路', '娄', '危'
+            '赵',
+            '钱',
+            '孙',
+            '李',
+            '周',
+            '吴',
+            '郑',
+            '王',
+            '冯',
+            '陈',
+            '褚',
+            '卫',
+            '蒋',
+            '沈',
+            '韩',
+            '杨',
+            '朱',
+            '秦',
+            '尤',
+            '许',
+            '何',
+            '吕',
+            '施',
+            '张',
+            '孔',
+            '曹',
+            '严',
+            '华',
+            '金',
+            '魏',
+            '陶',
+            '姜',
+            '戚',
+            '谢',
+            '邹',
+            '喻',
+            '柏',
+            '水',
+            '窦',
+            '章',
+            '云',
+            '苏',
+            '潘',
+            '葛',
+            '奚',
+            '范',
+            '彭',
+            '郎',
+            '鲁',
+            '韦',
+            '昌',
+            '马',
+            '苗',
+            '凤',
+            '花',
+            '方',
+            '俞',
+            '任',
+            '袁',
+            '柳',
+            '酆',
+            '鲍',
+            '史',
+            '唐',
+            '费',
+            '廉',
+            '岑',
+            '薛',
+            '雷',
+            '贺',
+            '倪',
+            '汤',
+            '滕',
+            '殷',
+            '罗',
+            '毕',
+            '郝',
+            '邬',
+            '安',
+            '常',
+            '乐',
+            '于',
+            '时',
+            '傅',
+            '皮',
+            '卞',
+            '齐',
+            '康',
+            '伍',
+            '余',
+            '元',
+            '卜',
+            '顾',
+            '孟',
+            '平',
+            '黄',
+            '和',
+            '穆',
+            '萧',
+            '尹',
+            '姚',
+            '邵',
+            '湛',
+            '汪',
+            '祁',
+            '毛',
+            '禹',
+            '狄',
+            '米',
+            '贝',
+            '明',
+            '臧',
+            '计',
+            '伏',
+            '成',
+            '戴',
+            '谈',
+            '宋',
+            '茅',
+            '庞',
+            '熊',
+            '纪',
+            '舒',
+            '屈',
+            '项',
+            '祝',
+            '董',
+            '梁',
+            '杜',
+            '阮',
+            '蓝',
+            '闵',
+            '席',
+            '季',
+            '麻',
+            '强',
+            '贾',
+            '路',
+            '娄',
+            '危'
         ];
     }
     VisualComponent.prototype.ngOnInit = function () {
@@ -198,7 +337,7 @@ var VisualComponent = /** @class */ (function () {
             },
             tooltip: {
                 trigger: 'item',
-                formatter: "{a} <br/>{b} : {c} ({d}%)"
+                formatter: '{a} <br/>{b} : {c} ({d}%)'
             },
             legend: {
                 type: 'scroll',
@@ -207,7 +346,7 @@ var VisualComponent = /** @class */ (function () {
                 top: 20,
                 bottom: 20,
                 data: this.data.legendData,
-                selected: this.data.selected,
+                selected: this.data.selected
             },
             series: [
                 {
@@ -227,53 +366,12 @@ var VisualComponent = /** @class */ (function () {
             ],
             color: ['#25859e', '#6acece', '#e78816', '#eabc7f', '#12619d']
         });
-        // this.echart1 = echarts.init(this.demo1.nativeElement);
         this.publicService.getData().subscribe(function (data) {
-            /*
-            this.echart1.setOption({
-              tooltip: {
-                trigger: 'item',
-                formatter: "{a} <br/>{b}: {c} ({d}%)"
-              },
-              legend: {
-                orient: 'vertical',
-                x: 'left',
-                data:['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
-              },
-              series: [
-                {
-                  name:'访问来源',
-                  type:'pie',
-                  radius: ['50%', '70%'],
-                  avoidLabelOverlap: false,
-                  label: {
-                    normal: {
-                      show: false,
-                      position: 'center'
-                    },
-                    emphasis: {
-                      show: true,
-                      textStyle: {
-                        fontSize: '30',
-                        fontWeight: 'bold'
-                      }
-                    }
-                  },
-                  labelLine: {
-                    normal: {
-                      show: false
-                    }
-                  },
-                  data:data
-                }
-              ],
-            })
-            */
-            //以下是指令方法二
+            // 以下是指令方法二
             _this.charType = {
                 tooltip: {
                     trigger: 'item',
-                    formatter: "{a} <br/>{b}: {c} ({d}%)"
+                    formatter: '{a} <br/>{b}: {c} ({d}%)'
                 },
                 legend: {
                     orient: 'vertical',
@@ -316,7 +414,10 @@ var VisualComponent = /** @class */ (function () {
         var selected = {};
         var name = '';
         for (var i = 0; i < count; i++) {
-            name = Math.random() > 0.65 ? this.makeWord(4, 1) + '.' + this.makeWord(3, 0) : this.makeWord(2, 1);
+            name =
+                Math.random() > 0.65
+                    ? this.makeWord(4, 1) + '.' + this.makeWord(3, 0)
+                    : this.makeWord(2, 1);
             legendData.push(name);
             seriesData.push({ name: name, value: Math.round(Math.random() * 10000) });
             selected[name] = i < 6;
@@ -339,7 +440,7 @@ var VisualComponent = /** @class */ (function () {
         this.echart.resize();
     };
     VisualComponent.prototype.ngOnDestroy = function () {
-        console.log(this.echart);
+        this.echart = null;
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('demo'),

@@ -81,7 +81,7 @@ module.exports = "<div class=\"child\">\n    <div class=\"header\">\n      <ng-c
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".child {\n  background-color: yellow; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi93ZWJwcm9qZWN0L3R5aHQvc3JjL2FwcC9jb250ZW50LXNoYWRvdy9jaGlsZC10d28vY2hpbGQtdHdvLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UseUJBQXdCLEVBQ3pCIiwiZmlsZSI6InNyYy9hcHAvY29udGVudC1zaGFkb3cvY2hpbGQtdHdvL2NoaWxkLXR3by5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jaGlsZHtcbiAgYmFja2dyb3VuZC1jb2xvcjogeWVsbG93O1xufVxuIl19 */"
+module.exports = ".child {\n  background-color: yellow; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi93ZWJwcm9qZWN0L2FuZ3VsYXIvdHlodC9zcmMvYXBwL2NvbnRlbnQtc2hhZG93L2NoaWxkLXR3by9jaGlsZC10d28uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSx5QkFBd0IsRUFDekIiLCJmaWxlIjoic3JjL2FwcC9jb250ZW50LXNoYWRvdy9jaGlsZC10d28vY2hpbGQtdHdvLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNoaWxke1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB5ZWxsb3c7XG59XG4iXX0= */"
 
 /***/ }),
 
@@ -112,16 +112,16 @@ var ChildTwoComponent = /** @class */ (function () {
     ChildTwoComponent.prototype.ngOnInit = function () {
     };
     ChildTwoComponent.prototype.ngAfterContentInit = function () {
-        console.log('子组件投影内容被加载完成');
+        // console.log('子组件投影内容被加载完成')
     };
     ChildTwoComponent.prototype.ngAfterContentChecked = function () {
-        console.log('子组件投影内容变更检测完成');
+        // console.log('子组件投影内容变更检测完成')
     };
     ChildTwoComponent.prototype.ngAfterViewInit = function () {
-        console.log('子组件视图加载完成');
+        // console.log('子组件视图加载完成')
     };
     ChildTwoComponent.prototype.ngAfterViewChecked = function () {
-        console.log('子组件视图变更检测完成');
+        // console.log('子组件视图变更检测完成')
     };
     ChildTwoComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -244,7 +244,7 @@ module.exports = "<div class=\"parent\">\n   <div class=\"panel-heading\">父组
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".parent {\n  background-color: #00a8ff; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi93ZWJwcm9qZWN0L3R5aHQvc3JjL2FwcC9jb250ZW50LXNoYWRvdy9uZy1jb250ZW50L25nLWNvbnRlbnQuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSwwQkFBeUIsRUFDMUIiLCJmaWxlIjoic3JjL2FwcC9jb250ZW50LXNoYWRvdy9uZy1jb250ZW50L25nLWNvbnRlbnQuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIucGFyZW50e1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDBhOGZmO1xufVxuIl19 */"
+module.exports = ".parent {\n  background-color: #00a8ff; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi93ZWJwcm9qZWN0L2FuZ3VsYXIvdHlodC9zcmMvYXBwL2NvbnRlbnQtc2hhZG93L25nLWNvbnRlbnQvbmctY29udGVudC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLDBCQUF5QixFQUMxQiIsImZpbGUiOiJzcmMvYXBwL2NvbnRlbnQtc2hhZG93L25nLWNvbnRlbnQvbmctY29udGVudC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5wYXJlbnR7XG4gIGJhY2tncm91bmQtY29sb3I6ICMwMGE4ZmY7XG59XG4iXX0= */"
 
 /***/ }),
 
@@ -275,16 +275,16 @@ var NgContentComponent = /** @class */ (function () {
     NgContentComponent.prototype.ngOnInit = function () {
     };
     NgContentComponent.prototype.ngAfterContentInit = function () {
-        console.log('父组件投影内容加载完成');
+        // console.log('父组件投影内容加载完成');
     };
     NgContentComponent.prototype.ngAfterContentChecked = function () {
-        console.log('父组件投影内容变更检测完毕');
+        // console.log('父组件投影内容变更检测完毕');
     };
     NgContentComponent.prototype.ngAfterViewInit = function () {
-        console.log('父组件视图加载完成');
+        // console.log('父组件视图加载完成')
     };
     NgContentComponent.prototype.ngAfterViewChecked = function () {
-        console.log('父组件视图变更检测完成');
+        // console.log('父组件视图变更检测完成')
     };
     NgContentComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({

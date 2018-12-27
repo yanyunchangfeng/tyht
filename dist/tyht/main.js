@@ -15,6 +15,7 @@ var map = {
 	],
 	"../cabient/cabient.module": [
 		"./src/app/cabient/cabient.module.ts",
+		"default~cabient-cabient-module~form-form-module~graph-visual-graph-visual-module",
 		"common",
 		"cabient-cabient-module"
 	],
@@ -24,11 +25,13 @@ var map = {
 	],
 	"../form/form.module": [
 		"./src/app/form/form.module.ts",
+		"default~cabient-cabient-module~form-form-module~graph-visual-graph-visual-module",
 		"common",
 		"form-form-module"
 	],
 	"../graph-visual/graph-visual.module": [
 		"./src/app/graph-visual/graph-visual.module.ts",
+		"default~cabient-cabient-module~form-form-module~graph-visual-graph-visual-module",
 		"common",
 		"graph-visual-graph-visual-module"
 	]
@@ -813,15 +816,7 @@ var AppMenuComponent = /** @class */ (function () {
                         label: '内容', icon: 'subject', routerLink: ['./shadow']
                     }
                 ]
-            },
-            {
-                label: 'HTML5', icon: 'settings',
-                items: [
-                    {
-                        label: '内容', icon: 'subject', routerLink: ['./shadow']
-                    }
-                ]
-            },
+            }
         ];
     };
     AppMenuComponent.prototype.changeTheme = function (theme) {
@@ -1437,10 +1432,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginService", function() { return LoginService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/internal/operators */ "./node_modules/rxjs/internal/operators/index.js");
-/* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _service_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../service/storage.service */ "./src/app/service/storage.service.ts");
+/* harmony import */ var _service_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../service/storage.service */ "./src/app/service/storage.service.ts");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1454,22 +1447,25 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
 var LoginService = /** @class */ (function () {
     function LoginService(http, storageService) {
         this.http = http;
         this.storageService = storageService;
     }
-    LoginService.prototype.login = function (loginModel) {
-        var _this = this;
-        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].url + "/users", { params: { 'name': loginModel.name, 'password': loginModel.password } }).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
-            if (res['length'] > 0) {
-                _this.storageService.setUser('user', res[0]['name']);
-            }
-            else {
-                throw new Error('用户名或密码错误');
-            }
-        }));
+    LoginService.prototype.login = function (_a) {
+        var name = _a.name, password = _a.password;
+        // mock server use
+        // return this.http.get(`${environment.url}/users`,{params :{'name' :loginModel.name,'password' :loginModel.password}}).pipe(
+        //   map((res :Response)=>{
+        //     if(res['length']>0){
+        //       this.storageService.setUser('user',res[0]['name']);
+        //     }else{
+        //       throw new Error('用户名或密码错误');
+        //     }
+        //   })
+        // )
+        this.storageService.setUser('user', name);
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])(name);
     };
     LoginService.prototype.isLoggedIn = function () {
         var user = this.storageService.getUser('user');
@@ -1488,7 +1484,7 @@ var LoginService = /** @class */ (function () {
             providedIn: 'root'
         }),
         __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"],
-            _service_storage_service__WEBPACK_IMPORTED_MODULE_4__["StorageService"]])
+            _service_storage_service__WEBPACK_IMPORTED_MODULE_2__["StorageService"]])
     ], LoginService);
     return LoginService;
 }());
@@ -1650,7 +1646,7 @@ var SelectivePreloadingStrategy = /** @class */ (function () {
     SelectivePreloadingStrategy.prototype.preload = function (route, load) {
         if (route.data && route.data['preload']) {
             this.preloadedModules.push(route.path);
-            console.log('Preloaded' + route.path);
+            console.log('Preloaded ' + route.path);
             return load();
         }
         else {
@@ -1837,7 +1833,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /webproject/tyht/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /webproject/angular/tyht/src/main.ts */"./src/main.ts");
 
 
 /***/ })
