@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "concurrently \"ng serve --hmr --port 4202 -o\"  \"npm run serve\" ",
+    "start": "concurrently \"ng serve --port 4202 -o\"  \"npm run serve\" ",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",

@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {trigger, state, style, transition, animate} from '@angular/animations';
 import {MenuItem} from 'primeng/primeng';
-import {HomeComponent} from "./home.component";
+import {HomeComponent} from './home.component';
 @Component({
   selector: 'app-menu',
   template: `
@@ -65,17 +65,7 @@ export class AppMenuComponent implements OnInit {
           }
 
         ]
-      },
-      {
-        label: 'HTML5', icon: 'settings',
-        items: [
-          {
-            label: '内容', icon: 'subject', routerLink: ['./shadow']
-          }
-
-        ]
-      },
-
+      }
     ];
   }
 

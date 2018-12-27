@@ -32,7 +32,6 @@ export class CabientComponent implements OnInit {
         for(let i =0;i<this.totalSize;i++){
           this.equipmentArrs[i]['index'] = i+1
         }
-        console.log(this.equipmentArrs)
     })
   }
   initEquipmentArrs(size){

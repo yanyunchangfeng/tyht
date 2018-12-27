@@ -11,23 +11,9 @@ export class EditorComponent implements OnInit {
 
   ngOnInit() {
     this.bubbleSort(this.arr);
-    console.log(this.arr);
-    // for(let i= 0;i<20000000;i++){
-    //   this.arr[i] = Math.floor(Math.random()*100);
-    // }
-    // console.log(this.arr);
-    // console.time('set');
-    // let newarrset;
-    // newarrset = new Set(this.arr);
-    // console.timeEnd('set');
-    // console.time('1');
-    console.time('quicksort');
     this.quickSort(this.arr);
-    console.log(this.arr);
-    console.timeEnd('quicksort')
     let newarr = this.unique(this.arr);
-    // console.timeEnd('1');
-    // console.log(newarr);
+
   }
   bubbleSort(arr){
     for (let r =1;r<arr.length;r++){
@@ -78,11 +64,4 @@ export class EditorComponent implements OnInit {
     }
   }
 }
-// Function.prototype.bind = function(obj) {
-//   let fun  = this;
-//   let args1 = [].slice.call(arguments, 1);
-//   return function(){
-//       let args2 = [].slice.call(arguments);
-//      fun.apply(obj,args1.concat(args2));
-//   }
-// }
+
