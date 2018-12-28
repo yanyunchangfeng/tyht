@@ -18,22 +18,22 @@ enum MenuOrientation {
       </div>
 
       <div class="topbar-right">
-        <a id="menu-button"  (click)="app.onMenuButtonClick($event)">
+        <a id="menu-button">
           <i></i>
         </a>
-        <a id="rightpanel-menu-button"  (click)="app.onRightPanelButtonClick($event)">
+        <a id="rightpanel-menu-button">
           <i class="material-icons">more_vert</i>
         </a>
-        <a id="topbar-menu-button"  (click)="app.onTopbarMenuButtonClick($event)">
+        <a id="topbar-menu-button" >
           <i class="material-icons">menu</i>
         </a>
         <ul class="topbar-items animated fadeInDown" [ngClass]="{'topbar-items-visible': app.topbarMenuActive}">
           <li #profile class="profile-item" *ngIf="app.profileMode==='top'||app.isHorizontal()"
               [ngClass]="{'active-top-menu':app.activeTopbarItem === profile}">
 
-            <a (click)="app.onTopbarItemClick($event,profile)">
+            <a>
               <img class="profile-image" src="assets/layout/images/avatar.png"/>
-              <span class="topbar-item-name">圭宁</span>
+              <span class="topbar-item-name">浪漫的野马</span>
             </a>
 
             <ul class="ultima-menu animated fadeInDown">
@@ -50,7 +50,7 @@ enum MenuOrientation {
                 </a>
               </li>
               <li role="menuitem">
-                <a (click)="toogleProfileModel()">
+                <a>
                   <i class="material-icons">settings_application</i>
                   <span>切换位置</span>
                 </a>
@@ -64,7 +64,7 @@ enum MenuOrientation {
             </ul>
           </li>
           <li #settings [ngClass]="{'active-top-menu':app.activeTopbarItem === settings}">
-            <a  (click)="app.onTopbarItemClick($event,settings)">
+            <a>
               <i class="topbar-icon material-icons">settings</i>
               <span class="topbar-item-name">设置</span>
             </a>
@@ -78,7 +78,7 @@ enum MenuOrientation {
             </ul>
           </li>
           <li #messages [ngClass]="{'active-top-menu':app.activeTopbarItem === messages}">
-            <a  (click)="app.onTopbarItemClick($event,messages)">
+            <a>
               <i class="topbar-icon material-icons animated swing">message</i>
               <span class="topbar-badge animated rubberBand">5</span>
               <span class="topbar-item-name">消息</span>
@@ -117,7 +117,7 @@ enum MenuOrientation {
             </ul>
           </li>
           <li #notifications [ngClass]="{'active-top-menu':app.activeTopbarItem === notifications}">
-            <a  (click)="app.onTopbarItemClick($event,notifications)">
+            <a>
               <i class="topbar-icon material-icons">timer</i>
               <span class="topbar-badge animated rubberBand">4</span>
               <span class="topbar-item-name">通知公告</span>
@@ -149,8 +149,7 @@ enum MenuOrientation {
               </li>
             </ul>
           </li>
-          <li #search class="search-item" [ngClass]="{'active-top-menu':app.activeTopbarItem === search}"
-              (click)="app.onTopbarItemClick($event,search)">
+          <li #search class="search-item" [ngClass]="{'active-top-menu':app.activeTopbarItem === search}">
                         <span class="md-inputfield">
                             <input type="text" pInputText>
                             <label>Search</label>

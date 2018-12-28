@@ -33,7 +33,7 @@ export class DiademoComponent implements OnInit {
         accept:()=>{
               this.dialog.confirm({
                 message:'第二个弹框?',
-                header:'warning',
+                header:'ok',
                 okVisible:true,
                 offVisible:true,
                 okButton:'blue',
@@ -43,6 +43,24 @@ export class DiademoComponent implements OnInit {
                 // delay:3000,
                 offLabel: ``,
                 accept:()=>{
+                  this.dialog.confirm({
+                    message:'第三个弹框?',
+                    header:'waiting',
+                    okVisible:true,
+                    offVisible:true,
+                    okButton:'blue',
+                    offButton:'green',
+                    okLabel:``,
+                    key:"3",
+                    // delay:3000,
+                    offLabel: ``,
+                    accept:()=>{
+    
+                    },
+                    reject:()=>{
+    
+                    }
+                  })
 
                 },
                 reject:()=>{

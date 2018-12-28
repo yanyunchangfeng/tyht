@@ -7,7 +7,7 @@ import{ScrollPanel} from 'primeng/components/scrollpanel/scrollpanel';
   selector: 'app-rightpanel',
   template: `
     <div class="layout-rightpanel" [ngClass]="{'layout-rightpanel-active': app.rightPanelActive}"
-         (click)="app.onRightPanelClick()">
+         >
       <p-scrollPanel #scrollRightPanel [style]="{height: '100%'}">
         <div class="layout-rightpanel-wrapper">
           <div class="layout-rightpanel-header themeColor">
@@ -33,24 +33,24 @@ import{ScrollPanel} from 'primeng/components/scrollpanel/scrollpanel';
             <h1 style="margin-top: 20px;margin-bottom: 20px">菜单模式</h1>
             <div class="ui-g">
               <div class="ui-g-12 ">
-                <button class="ui-g-12" type="button" label="固定" (click)="this.app.changeToStaticMenu()" pButton
+                <button class="ui-g-12" type="button" label="固定" pButton
                         icon="ui-icon-reorder"></button>
               </div>
             </div>
             <div class="ui-g">
               <div class="ui-g-12 ">
-                <button class="ui-g-12" type="button" label="模态" (click)="this.app.changeToOverlayMenu()" pButton
+                <button class="ui-g-12" type="button" label="模态"  pButton
                         icon="ui-icon-format-indent-increase"></button>
               </div>
             </div>
             <div class="ui-g">
               <div class="ui-g-12 ">
-                <button class="ui-g-12" type="button" label="微型" (click)="this.app.changeToSlimMenu()" pButton
+                <button class="ui-g-12" type="button" label="微型"  pButton
                         icon="ui-icon-more-vert"></button>
               </div>
             </div>
             <div class="ui-g-12 ">
-              <button class="ui-g-12" type="button" label="吸顶" (click)="this.app.changeToHorizontalMenu()" pButton
+              <button class="ui-g-12" type="button" label="吸顶"  pButton
                       icon="ui-icon-border-horizontal"></button>
             </div>
           </div>

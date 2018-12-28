@@ -18,7 +18,7 @@ import {MenuItem} from 'primeng/primeng';
     </ul>
 
     <div class="layout-breadcrumb-options">
-        <a  title="Logout">
+        <a  title="Logout" >
             <i class="material-icons">power_settings_new</i>
         </a>
     </div>
