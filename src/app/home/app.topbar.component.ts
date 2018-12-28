@@ -18,7 +18,7 @@ enum MenuOrientation {
       </div>
 
       <div class="topbar-right">
-        <a id="menu-button">
+        <a id="menu-button" (click)="app.onMenuButtonClick($event)">
           <i></i>
         </a>
         <a id="rightpanel-menu-button">
@@ -32,7 +32,7 @@ enum MenuOrientation {
               [ngClass]="{'active-top-menu':app.activeTopbarItem === profile}">
 
             <a>
-              <img class="profile-image" src="assets/layout/images/avatar.png"/>
+              <img class="profile-image" src="assets/img/ym.jpg"/>
               <span class="topbar-item-name">浪漫的野马</span>
             </a>
 
@@ -86,31 +86,31 @@ enum MenuOrientation {
             <ul class="ultima-menu animated fadeInDown">
               <li role="menuitem">
                 <a  class="topbar-message">
-                  <img src="assets/layout/images/avatar.png" width="35"/>
+                  <img src="assets/img/ym.jpg" width="35"/>
                   <span>消息内容1</span>
                 </a>
               </li>
               <li role="menuitem">
                 <a  class="topbar-message">
-                  <img src="assets/layout/images/avatar.png" width="35"/>
+                  <img src="assets/img/ym.jpg" width="35"/>
                   <span>消息内容2</span>
                 </a>
               </li>
               <li role="menuitem">
                 <a  class="topbar-message">
-                  <img src="assets/layout/images/avatar.png" width="35"/>
+                  <img src="assets/img/ym.jpg" width="35"/>
                   <span>消息内容3</span>
                 </a>
               </li>
               <li role="menuitem">
                 <a  class="topbar-message">
-                  <img src="assets/layout/images/avatar.png" width="35"/>
+                  <img src="assets/img/ym.jpg" width="35"/>
                   <span>消息内容4</span>
                 </a>
               </li>
               <li role="menuitem">
                 <a  class="topbar-message">
-                  <img src="assets/layout/images/avatar.png" width="35"/>
+                  <img src="assets/img/ym.jpg" width="35"/>
                   <span>消息内容5</span>
                 </a>
               </li>
