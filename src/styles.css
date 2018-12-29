@@ -1,27 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
-@import url(~primeicons/primeicons.css);
-@import url(~primeng/resources/primeng.min.css);
 body {
   margin: 0;
   font: 12px "microsoft yahei";
-  height: 100vh; }
+  height: 100vh;
+}
 
 ul {
   margin: 0;
   list-style: none;
-  padding: 0; }
+  padding: 0;
+}
 
 i.material-icons {
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 .container {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 80px auto;
-  height: 100%; }
-  .container #content {
-    padding: 30px 50px; }
+  -ms-grid-columns: 80px auto;
+      grid-template-columns: 80px auto;
+  height: 100%;
+}
+
+.container #content {
+  padding: 30px 50px;
+}
 
 .text-align-right {
-  text-align: right; }
-
+  text-align: right;
+}
 /*# sourceMappingURL=styles.css.map */

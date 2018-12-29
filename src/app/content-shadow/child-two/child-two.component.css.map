@@ -1,7 +1,9 @@
 {
-"version": 3,
-"mappings": "AAAA,MAAM;EACJ,gBAAgB,EAAE,MAAM",
-"sources": ["child-two.component.scss"],
-"names": [],
-"file": "child-two.component.css"
+    "version": 3,
+    "mappings": "AAAA,AAAA,MAAM,CAAA;EACJ,gBAAgB,EAAE,MAAM;CACzB",
+    "sources": [
+        "child-two.component.scss"
+    ],
+    "names": [],
+    "file": "child-two.component.css"
 }

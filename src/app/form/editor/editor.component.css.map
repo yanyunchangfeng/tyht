@@ -1,7 +1,9 @@
 {
-"version": 3,
-"mappings": "",
-"sources": [],
-"names": [],
-"file": "editor.component.css"
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "editor.component.scss"
+    ],
+    "names": [],
+    "file": "editor.component.css"
 }

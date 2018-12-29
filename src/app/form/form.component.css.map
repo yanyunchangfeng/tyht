@@ -1,7 +1,9 @@
 {
-"version": 3,
-"mappings": "AAAA,aAAa;EACX,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAC,IAAI;EACR,WAAW,EAAE,MAAM;;AAErB,sBAAqB;EACnB,OAAO,EAAE,GAAG;;AAEd,SAAS;EACP,aAAa,EAAE,4BAA2B;EAC1C,eAAe,EAAE,YAAW",
-"sources": ["form.component.scss"],
-"names": [],
-"file": "form.component.css"
+    "version": 3,
+    "mappings": "AAAA,AAAA,aAAa,CAAA;EACX,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAC,IAAI;EACR,WAAW,EAAE,MAAM;CACpB;;AACD,AAAA,KAAK,AAAA,WAAW,GAAE,GAAG,CAAA;EACnB,OAAO,EAAE,GAAG;CACb;;AACD,AAAA,SAAS,CAAA;EACP,aAAa,EAAE,GAAG,CAAC,KAAK,CAAC,OAAO,CAAA,UAAU;EAC1C,eAAe,EAAE,CAAC,CAAA,UAAU;CAC7B",
+    "sources": [
+        "form.component.scss"
+    ],
+    "names": [],
+    "file": "form.component.css"
 }

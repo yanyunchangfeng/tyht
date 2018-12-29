@@ -1,7 +1,9 @@
 {
-"version": 3,
-"mappings": "AAAA,cAAc;EACZ,KAAK,EAAE,IAAI;EACX,MAAM,EAAC,KAAK;EACZ,KAAK,EAAE,IAAI",
-"sources": ["visual.component.scss"],
-"names": [],
-"file": "visual.component.css"
+    "version": 3,
+    "mappings": "AAAA,AAAA,cAAc,CAAA;EACZ,KAAK,EAAE,IAAI;EACX,MAAM,EAAC,KAAK;EACZ,KAAK,EAAE,IAAI;CACZ",
+    "sources": [
+        "visual.component.scss"
+    ],
+    "names": [],
+    "file": "visual.component.css"
 }

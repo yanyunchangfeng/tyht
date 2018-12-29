@@ -1,7 +1,9 @@
 {
-"version": 3,
-"mappings": "",
-"sources": [],
-"names": [],
-"file": "diademo.component.css"
+    "version": 3,
+    "mappings": "AAAA,AAAA,GAAG,CAAA;EACC,QAAQ,EAAE,QAAQ;CACrB;;AACD,AAAA,KAAK,CAAA;EACD,QAAQ,EAAE,QAAQ;EAClB,QAAQ,EAAE,IAAI;CACjB;;AACD,AAAA,aAAa,CAAA;EACT,QAAQ,EAAE,QAAQ;EAClB,IAAI,EAAC,KAAK;CACb;;AACD,AAAA,UAAU,CAAA;EACN,MAAM,EAAE,IAAI;EACZ,OAAO,EAAE,IAAI;EACb,MAAM,EAAE,cAAc;EACtB,KAAK,EAAE,KAAK;EACZ,UAAU,EAAE,KAAK;EACjB,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAC,KAAK;CACZ",
+    "sources": [
+        "diademo.component.scss"
+    ],
+    "names": [],
+    "file": "diademo.component.css"
 }

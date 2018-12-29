@@ -1,7 +1,9 @@
 {
-"version": 3,
-"mappings": "",
-"sources": [],
-"names": [],
-"file": "child-three.component.css"
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "child-three.component.scss"
+    ],
+    "names": [],
+    "file": "child-three.component.css"
 }

@@ -1,7 +1,9 @@
 {
-"version": 3,
-"mappings": "",
-"sources": [],
-"names": [],
-"file": "wangeditor.component.css"
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "wangeditor.component.scss"
+    ],
+    "names": [],
+    "file": "wangeditor.component.css"
 }

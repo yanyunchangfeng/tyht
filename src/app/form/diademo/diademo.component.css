@@ -1,3 +1,24 @@
+img {
+  position: absolute;
+}
 
+:host {
+  position: relative;
+  overflow: auto;
+}
 
+.imgContainer {
+  position: absolute;
+  left: 200px;
+}
+
+#container {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #aaa;
+  width: 500px;
+  min-height: 300px;
+  position: absolute;
+  top: 100px;
+}
 /*# sourceMappingURL=diademo.component.css.map */

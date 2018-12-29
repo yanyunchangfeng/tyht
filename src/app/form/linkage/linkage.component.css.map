@@ -1,7 +1,9 @@
 {
-"version": 3,
-"mappings": "",
-"sources": [],
-"names": [],
-"file": "linkage.component.css"
+    "version": 3,
+    "mappings": "AACA,AAAA,GAAG,CAAA;EACC,MAAM,EAAC,KAAK;EACZ,UAAU,EAAE,oCAAoC,CAAC,SAAS,CAAC,MAAM,CAAE,MAAK,CAAE,MAAK;CAClF;;AACD,AAAA,gBAAgB,CAAA;EACZ,MAAM,EAAC,KAAK;EACZ,gBAAgB,EAAE,0EAA2E;CAChG;;AACD,AAAA,KAAK,CAAA;EACD,IAAI,EAAE,6CAA6C;CACtD",
+    "sources": [
+        "linkage.component.scss"
+    ],
+    "names": [],
+    "file": "linkage.component.css"
 }
