@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
-import {HomeComponent} from "./home.component";
 import {Router} from '@angular/router';
+import {HomeComponent} from './home.component';
 
 enum MenuOrientation {
   STATIC,
@@ -86,31 +86,33 @@ enum MenuOrientation {
             <ul class="ultima-menu animated fadeInDown">
               <li role="menuitem">
                 <a  class="topbar-message">
+
                   <img src="assets/img/ym.jpg" width="35"/>
-                  <span>消息内容1</span>
                 </a>
               </li>
               <li role="menuitem">
                 <a  class="topbar-message">
+
                   <img src="assets/img/ym.jpg" width="35"/>
+
                   <span>消息内容2</span>
                 </a>
               </li>
               <li role="menuitem">
-                <a  class="topbar-message">
+
                   <img src="assets/img/ym.jpg" width="35"/>
+
                   <span>消息内容3</span>
-                </a>
               </li>
               <li role="menuitem">
                 <a  class="topbar-message">
-                  <img src="assets/img/ym.jpg" width="35"/>
+
                   <span>消息内容4</span>
                 </a>
               </li>
               <li role="menuitem">
                 <a  class="topbar-message">
-                  <img src="assets/img/ym.jpg" width="35"/>
+
                   <span>消息内容5</span>
                 </a>
               </li>
