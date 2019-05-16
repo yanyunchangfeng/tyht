@@ -1,12 +1,11 @@
-import {Component, Input, OnInit, HostListener } from '@angular/core';
+import {Component, OnInit, HostListener } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import {DialogService} from "../../UIcomponent/dialog/dialog.service";
 // import {DialogService} from "xxddialog/components/index"
-import {timer} from "rxjs";
 @Component({
   selector: 'app-diademo',
   templateUrl: './diademo.component.html',
-  styleUrls: ['./diademo.component.scss']
+  styleUrls:['./diademo.component.scss']
 })
 export class DiademoComponent implements OnInit {
   left = 0;
@@ -28,45 +27,9 @@ export class DiademoComponent implements OnInit {
         okButton:'blue',
         offButton:'green',
         okLabel:``,
-        key:"1",
+        key:"4",
         offLabel: ``,
         accept:()=>{
-              this.dialog.confirm({
-                message:'第二个弹框?',
-                header:'ok',
-                okVisible:true,
-                offVisible:true,
-                okButton:'blue',
-                offButton:'green',
-                okLabel:``,
-                key:"2",
-                // delay:3000,
-                offLabel: ``,
-                accept:()=>{
-                  this.dialog.confirm({
-                    message:'第三个弹框?',
-                    header:'waiting',
-                    okVisible:true,
-                    offVisible:true,
-                    okButton:'blue',
-                    offButton:'green',
-                    okLabel:``,
-                    key:"3",
-                    // delay:3000,
-                    offLabel: ``,
-                    accept:()=>{
-    
-                    },
-                    reject:()=>{
-    
-                    }
-                  })
-
-                },
-                reject:()=>{
-
-                }
-              })
         },
         reject:()=>{
 
@@ -137,5 +100,11 @@ export class DiademoComponent implements OnInit {
     //    this.dropsrc = reader.result as any;
     // };
 
+  }
+  accept(){
+    alert('qer')
+  }
+  reject(){
+    alert('qu')
   }
 }

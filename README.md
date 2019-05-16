@@ -1,31 +1,149 @@
-# tyht
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.4
-## Development server
+<p align="center">
+    <img width="300" src="./src/assets/img/yanyunchangfeng.png">
+</p>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+##  介绍
+你好，我是徐晓东，笔名燕云长风。大漠穷秋于 2019-03-16 21:22 赠此笔名。   
+寓意：结合李白著名的边塞诗《关山月》取【燕云长风】—— 长风几万里，吹度玉门关。
 
-## Code scaffolding
+yycf-dialog 是一个基于Angular开发的通用业务组件库，包含Loading, Message, Confirm
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-### Screenshots
+## 安装
+```
+   npm  install yycf-dialog 
+```
 
-<img src="./src/assets/img/login.png">
-<img src="./src/assets/img/echarts.png">
-<img src="./src/assets/img/cabient.png">
-<img src="./src/assets/img/xxdcusdia.png">
+## 效果预览
 
-## Build
+  <p align="center">
+    <img  width ="300" src="./src/assets/img/s1.png">
+  </p>
+  <p align="center">
+    <img  width ="300" src="./src/assets/img/s2.png">
+  </p>
+  <p align="center">
+    <img  width ="300" src="./src/assets/img/s3.png">
+  </p>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+## 使用
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+import { DialogModule, DialogService} from 'yycf-dialog/components';
 
-## Running end-to-end tests
+<yycf-dialog [key]="'1'"></yycf-dialog>
+<yycf-dialog [key]="'2'"></yycf-dialog>
+<yycf-dialog [key]="'3'"></yycf-dialog>
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+//自定义的footer button
+<yycf-dialog [key]="'4'" #ct>
+  <yycf-footer>
+    <button class="blue" (click)="ct.accept()">确定<button>
+    <button class="green" (click)="ct.reject()">取消<button>
+  <yycf-footer>
+<yycf-dialog>
 
-## Further help
+export class DialogDemo  implements OnInit{ 
+           
+    constructor(private dialogService: DialogService) {}
+ 
+    ngOnInit(){
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+    this.dialog.confirm(
+      {
+        message:'确定要删除吗?',
+        header:'warning',
+        okVisible:true,
+        offVisible:true,
+        okButton:'blue',
+        offButton:'green',
+        okLabel:``,
+        key:"1",
+        offLabel: ``,
+        accept:()=>{
+              this.dialog.confirm({
+                message:'第二个弹框?',
+                header:'ok',
+                okVisible:true,
+                offVisible:true,
+                okButton:'blue',
+                offButton:'green',
+                okLabel:``,
+                key:"2",
+                // delay:3000,
+                offLabel: ``,
+                accept:()=>{
+                  this.dialog.confirm({
+                    message:'第三个弹框?',
+                    header:'waiting',
+                    okVisible:true,
+                    offVisible:true,
+                    okButton:'blue',
+                    offButton:'green',
+                    okLabel:``,
+                    key:"3",
+                    // delay:3000,
+                    offLabel: ``,
+                    accept:()=>{
+    
+                    },
+                    reject:()=>{
+    
+                    }
+                  })
+
+                },
+                reject:()=>{
+
+                }
+              })
+        },
+        reject:()=>{
+
+        }
+      }
+    );
+
+    }
+}
+
+```
+
+
+| 参数     | 说明         | 类型         | 默认值 |
+|----------|-------------|-------------|-------|
+| key   | 标识当前对话框的唯一性 | string     | null  |
+| width   | 设置对话框宽度 | string     | auto  |
+| height   | 设置对话框高度 | string     | auto  |
+| opacity   | 设置对话框透明度 | number     | .5  |
+| message   | 设置对话框标题 | string     | How are you  |
+| header    | 对话框的类型   | string     |   waiting|
+| okVisible   | 确定按钮的可见性 | Boolean     | true  |
+| offVisible   | 取消按钮的可见性 | string     | true  |
+| okButton   | 确定按钮的颜色| string          | blue  |
+| offButton   | 设置对话框标题 | string        | green |
+| okLabel   | 确定按钮的内容| string           | 确定 |
+| offLabel   | 取消按钮的内容 | string         | 取消  |
+| delay      | 指定对话框的生命周期| number(ms) |  null  |
+| accept      | 确定按钮的回调函数| Function    |  null  |
+| reject      | 取消按钮的回调函数| Function    |  null  |
+
+## 我参与的系列项目
+
+* NiceFish：美人鱼，这是一个微型Blog系统，前端基于Angular7.0 + PrimeNG7.1.0。 https://gitee.com/mumu-osc/NiceFish
+* NiceFish-React：这是React版的实现，界面外观完全相同。
+  采用React Hooks 16.8.3 版本，使用TypeScript、Ant Design组件库以及Bootstrap v4.2.1 开发。 https://gitee.com/mumu-osc/NiceFish-React
+* OpenWMS-Frontend： OpenWMS项目前端基于 Angular 7.0 + PrimeNG 7.1.0。 https://gitee.com/mumu-osc/OpenWMS-Frontend
+* nicefish-spring-cloud： https://gitee.com/mumu-osc/nicefish-spring-cloud ，这是NiceFish的服务端代码，基于SpringCloud。已经完成了一些基本的功能，如 SpringSecurity+OAuth2+JWT 实现SSO，文章、用户、评论等的分页查询等。如果你需要与这个后端代码进行对接，请检出本项目的 for-spring-cloud 分支。
+
+## 开源许可证
+
+MIT
+
+## 我的社交主页
+
+1. [燕云长风知乎专栏](https://zhuanlan.zhihu.com/yanyunchangfeng)  
+2. [燕云长风知乎](https://zhihu.com/people/hbxyxuxiaodong)  
+3. [燕云长风Github](https://github.com/yanyunchangfeng)  
+4. [燕云长风Gitee](https://gitee.com/yanyunchangfeng)  
+ 

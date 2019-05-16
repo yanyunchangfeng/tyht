@@ -5,6 +5,7 @@ export interface Dialog{
   key?: string;
   delay?:number;
   icon?: string;
+  opacity?:number;
   header?: string;
   accept?: Function;
   reject?: Function;

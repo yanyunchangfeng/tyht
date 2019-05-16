@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 'xxd-footer',
+  selector: 'yycf-footer',
   template: '<ng-content></ng-content>'
 })
 export class Footer {}

@@ -4,7 +4,7 @@
     <div [ngClass]="header" class="dialog-header"></div>
     <div class="dialog-content" [innerHTML]="message"></div>
     <div class="dialog-footer" *ngIf="footer">
-      <ng-content select="xxd-footer"></ng-content>
+      <ng-content select="yycf-footer"></ng-content>
     </div>
     <div class="dialog-footer" *ngIf="!footer">
       <button [ngClass]="okButton" (click)="accept()" *ngIf="okVisible">{{okLabel}}</button>

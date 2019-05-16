@@ -8,7 +8,7 @@ export declare class DialogComponent implements OnDestroy, OnInit {
     key: any;
     width: string;
     height: string;
-    opacity: string;
+    opacity: number;
     message: string;
     okLabel: string;
     offLabel: string;

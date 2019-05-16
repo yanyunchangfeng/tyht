@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {FormsModule,ReactiveFormsModule} from "@angular/forms";
 import {EchartDirective} from "../directive/echart.directive";
-// import {DialogModule} from "xxddialog/components/index";
+// import {DialogModule} from "xxddialog/components";
 import {DialogModule} from "../UIcomponent/dialog/dialog.component";
 import {
   DropdownModule,

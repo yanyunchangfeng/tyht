@@ -13,8 +13,8 @@ var RenderType_Footer = i0.ɵcrt({ encapsulation: 2, styles: styles_Footer, data
 exports.RenderType_Footer = RenderType_Footer;
 function View_Footer_0(_l) { return i0.ɵvid(0, [i0.ɵncd(null, 0)], null, null); }
 exports.View_Footer_0 = View_Footer_0;
-function View_Footer_Host_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 1, "xxd-footer", [], null, null, null, View_Footer_0, RenderType_Footer)), i0.ɵdid(1, 49152, null, 0, i1.Footer, [], null, null)], null, null); }
+function View_Footer_Host_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 1, "yycf-footer", [], null, null, null, View_Footer_0, RenderType_Footer)), i0.ɵdid(1, 49152, null, 0, i1.Footer, [], null, null)], null, null); }
 exports.View_Footer_Host_0 = View_Footer_Host_0;
-var FooterNgFactory = i0.ɵccf("xxd-footer", i1.Footer, View_Footer_Host_0, {}, {}, ["*"]);
+var FooterNgFactory = i0.ɵccf("yycf-footer", i1.Footer, View_Footer_Host_0, {}, {}, ["*"]);
 exports.FooterNgFactory = FooterNgFactory;
 //# sourceMappingURL=footer.component.ngfactory.js.map

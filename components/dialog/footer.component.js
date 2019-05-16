@@ -12,7 +12,7 @@ var Footer = /** @class */ (function () {
     }
     Footer = __decorate([
         core_1.Component({
-            selector: 'xxd-footer',
+            selector: 'yycf-footer',
             template: '<ng-content></ng-content>'
         })
     ], Footer);

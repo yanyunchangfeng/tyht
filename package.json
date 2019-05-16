@@ -1,6 +1,6 @@
 {
   "name": "tyht",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -11,7 +11,7 @@
     "e2e": "ng e2e",
     "serve": "json-server mock/data.json --watch",
     "ts": "ngc -p index.ts",
-    "bundle2": "ngc -p tsconfig-release.json",
+    "bundle": "ngc -p tsconfig-release.json",
     "bundle1": "ngc -p tsconfig-aot.json"
   },
   "dependencies": {

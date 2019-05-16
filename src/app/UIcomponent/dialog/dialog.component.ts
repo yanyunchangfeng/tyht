@@ -16,7 +16,7 @@ const HTML_TEMPLATE = `
         <div [ngClass]="header" class="dialog-header"></div>
         <div class="dialog-content" [innerHTML]="message"></div>
         <div class="dialog-footer" *ngIf="footer">
-          <ng-content select="xxd-footer"></ng-content>
+          <ng-content select="yycf-footer"></ng-content>
         </div>
         <div class="dialog-footer" *ngIf="!footer">
           <button [ngClass]="okButton" (click)="accept()" *ngIf="okVisible">{{okLabel}}</button>
@@ -154,7 +154,7 @@ const css_STYLE = `
     }
 `;
 @Component({
-  selector: 'xxd-dialog',
+  selector: 'yycf-dialog',
   template:HTML_TEMPLATE,
   styles:[css_STYLE],
   animations:[
@@ -175,7 +175,7 @@ export class DialogComponent implements OnDestroy,OnInit{
   @Input() key;
   @Input() width = "auto";
   @Input() height = "auto";
-  @Input() opacity = ".5";
+  @Input() opacity = .5;
   @Input() message = 'How are you';
   @Input() okLabel = '确定';
   @Input() offLabel = '取消';
@@ -220,7 +220,7 @@ export class DialogComponent implements OnDestroy,OnInit{
         this.hide();
         return;
       }
-      if(dialog.key == this.key){
+      if(dialog.key === this.key){
         this.dialog = dialog;
         this.message = this.dialog.message||this.message;
         this.okLabel = this.dialog.okLabel||this.okLabel;
@@ -229,6 +229,7 @@ export class DialogComponent implements OnDestroy,OnInit{
         this.offVisible = this.dialog.offVisible ==null?this.offVisible:this.dialog.offVisible;
         this.zIndex = this.dialogService.zIndex ||this.zIndex;
         this.header = this.dialog.header || this.header;
+        this.opacity = this.dialog.opacity || this.opacity;
         this.delay = this.dialog.delay||this.delay;
         this.okButton = this.dialog.okButton||this.okButton;
         this.offButton = this.dialog.offButton||this.offButton;
