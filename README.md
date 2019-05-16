@@ -1,5 +1,5 @@
 <p align="center">
-    <img width="300" src="./src/assets/img/yanyunchangfeng.png">
+    <img width="300" src="src/assets/img/yanyunchangfeng.png">
 </p>
 
 ##  介绍
@@ -17,10 +17,12 @@ yycf-dialog 是一个基于Angular开发的通用业务组件库，包含Loading
 
   <p align="center">
     <img  width ="300" src="./src/assets/img/s1.png">
-  </p>
+  </p>  
+
   <p align="center">
     <img  width ="300" src="./src/assets/img/s2.png">
   </p>
+    
   <p align="center">
     <img  width ="300" src="./src/assets/img/s3.png">
   </p>
@@ -35,11 +37,11 @@ import { DialogModule, DialogService} from 'yycf-dialog/components';
 <yycf-dialog [key]="'2'"></yycf-dialog>
 <yycf-dialog [key]="'3'"></yycf-dialog>
 
-//自定义的footer button
+//自定义的footer button 需要自定义button样式，或者直接使用其他组件库的button
 <yycf-dialog [key]="'4'" #ct>
   <yycf-footer>
-    <button class="blue" (click)="ct.accept()">确定<button>
-    <button class="green" (click)="ct.reject()">取消<button>
+    <button class="customButtonClass" (click)="ct.accept()">确定<button>
+    <button class="customButtonclass" (click)="ct.reject()">取消<button>
   <yycf-footer>
 <yycf-dialog>
 
@@ -101,10 +103,8 @@ export class DialogDemo  implements OnInit{
         reject:()=>{
 
         }
-      }
-    );
-
-    }
+      });
+   }
 }
 
 ```

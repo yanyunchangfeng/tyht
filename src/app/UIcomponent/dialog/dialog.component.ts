@@ -38,7 +38,7 @@ const css_STYLE = `
   align-items: center;
   justify-content: center; }
   .g-dialog-container .dialog-window {
-    width: 15rem;
+    min-width: 16rem;
     padding: 1rem;
     border-radius: 10px;
     background: rgba(0, 0, 0, 0.8);
