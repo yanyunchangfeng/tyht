@@ -1,6 +1,6 @@
 {
   "name": "tyht",
-  "version": "3.0.0",
+  "version": "6.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -60,5 +60,9 @@
     "tslib": "^1.9.0",
     "tslint": "~5.9.1",
     "typescript": "^3.1.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yanyunchangfeng/tyht.git"
   }
 }
