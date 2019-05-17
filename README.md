@@ -64,10 +64,10 @@ export class DialogDemo  implements OnInit{
         offLabel: ``,
         accept:()=>{
               this.dialog.confirm({
-                message:'第二个弹框?',
+                message:'已删除',
                 header:'ok',
                 okVisible:true,
-                offVisible:true,
+                offVisible:false,
                 okButton:'blue',
                 offButton:'red',
                 okLabel:``,
@@ -76,10 +76,10 @@ export class DialogDemo  implements OnInit{
                 offLabel: ``,
                 accept:()=>{
                   this.dialog.confirm({
-                    message:'第三个弹框?',
+                    message:'正在拼命加载……',
                     header:'waiting',
-                    okVisible:true,
-                    offVisible:true,
+                    okVisible:false,
+                    offVisible:false,
                     okButton:'blue',
                     offButton:'green',
                     okLabel:``,
@@ -116,15 +116,15 @@ export class DialogDemo  implements OnInit{
 | width   | 设置对话框宽度 | string     | auto  |
 | height   | 设置对话框高度 | string     | auto  |
 | opacity   | 设置对话框透明度 | number   | .5  |
-| message   | 设置对话框标题 | string     | yycf-dialog|
-| header    | 对话框的类型   | 'waiting' 'ok' 'warning' |   waiting|
+| message   | 设置对话框标题 | string     | yycf-dialog component|
+| header    | 对话框的类型   | 'waiting' 'ok' 'warning' | 'waiting'|
 | okVisible   | 确定按钮的可见性 | boolean    | true  |
-| offVisible   | 取消按钮的可见性 | string     | true  |
-| okButton   | 确定按钮的颜色| 'blue' 'green' 'red'     | 'blue'  |
-| offButton   | 取消按钮的颜色 | 'blue' 'green' 'red'     | green |
+| offVisible   | 取消按钮的可见性 | boolean     | true  |
+| okButton   | 确定按钮的颜色| 'blue'  'green'  'red'     | 'blue'  |
+| offButton   | 取消按钮的颜色 | 'blue'  'green' 'red'     | 'green' |
 | okLabel   | 确定按钮的内容|  string           | 确定 |
 | offLabel   | 取消按钮的内容 | string         | 取消  |
-| delay      | 指定对话框的生命周期| number(ms) |  null  |
+| delay      | 指定对话框的生命周期| number (ms) |  null  |
 | accept      | 确定按钮的回调函数| Function    |  null  |
 | reject      | 取消按钮的回调函数| Function    |  null  |
 

@@ -31,10 +31,10 @@ export class DiademoComponent implements OnInit {
         offLabel: ``,
         accept:()=>{
               this.dialog.confirm({
-                message:'第二个弹框?',
+                message:'已删除',
                 header:'ok',
                 okVisible:true,
-                offVisible:true,
+                offVisible:false,
                 okButton:'blue',
                 offButton:'red',
                 okLabel:``,
@@ -43,10 +43,10 @@ export class DiademoComponent implements OnInit {
                 offLabel: ``,
                 accept:()=>{
                   this.dialog.confirm({
-                    message:'第三个弹框?',
+                    message:'正在拼命加载……',
                     header:'waiting',
-                    okVisible:true,
-                    offVisible:true,
+                    okVisible:false,
+                    offVisible:false,
                     okButton:'blue',
                     offButton:'green',
                     okLabel:``,
