@@ -5,7 +5,7 @@ import { Dialog } from "./dialog";
 export declare class DialogComponent implements OnDestroy, OnInit {
     private dialogService;
     header: string;
-    key: any;
+    key: string;
     width: string;
     height: string;
     opacity: number;
@@ -17,7 +17,7 @@ export declare class DialogComponent implements OnDestroy, OnInit {
     offVisible: boolean;
     okButton: string;
     offButton: string;
-    visible: any;
+    visible: boolean;
     delay: number;
     dialog: Dialog;
     mask: ElementRef;

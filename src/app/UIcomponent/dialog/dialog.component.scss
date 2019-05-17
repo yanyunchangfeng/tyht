@@ -2,10 +2,10 @@
 
   background-color:$backgroundcolor;
   &:hover {
-    background-color:darken($backgroundcolor,10%);
+    background-color:lighten($backgroundcolor,10.5%);
   }
   &:active {
-    background-color:lighten($backgroundcolor,20%);
+    background-color:darken($backgroundcolor,12.5%);
   }
 }
 .g-dialog-container {
@@ -98,19 +98,17 @@
         border: none;
         padding: 0.5rem 1.5rem;
         margin: 0.3rem;
-        text-shadow: #666 1px 1px ;
         outline: none;
         font-size: 1rem;
-        border-radius: 5px;
         color: #eee;
         &.green{
           @include setbutton(#0f8f0f);
         }
         &.red{
-          @include setbutton(#8f0f0f);
+          @include setbutton(#f6214b);
         }
         &.blue{
-          @include setbutton(#39b9c6);
+          @include setbutton(#01869a);
         }
       }
     }

@@ -18,7 +18,7 @@ export class DiademoComponent implements OnInit {
     private si: DomSanitizer
     ) { }
   ngOnInit() {
-   let  dia= this.dialog.confirm(
+    this.dialog.confirm(
       {
         message:'确定要删除吗?',
         header:'warning',
@@ -27,15 +27,50 @@ export class DiademoComponent implements OnInit {
         okButton:'blue',
         offButton:'green',
         okLabel:``,
-        key:"4",
+        key:"1",
         offLabel: ``,
         accept:()=>{
+              this.dialog.confirm({
+                message:'第二个弹框?',
+                header:'ok',
+                okVisible:true,
+                offVisible:true,
+                okButton:'blue',
+                offButton:'red',
+                okLabel:``,
+                key:"2",
+                // delay:3000,
+                offLabel: ``,
+                accept:()=>{
+                  this.dialog.confirm({
+                    message:'第三个弹框?',
+                    header:'waiting',
+                    okVisible:true,
+                    offVisible:true,
+                    okButton:'blue',
+                    offButton:'green',
+                    okLabel:``,
+                    key:"3",
+                    // delay:3000,
+                    offLabel: ``,
+                    accept:()=>{
+    
+                    },
+                    reject:()=>{
+    
+                    }
+                  })
+
+                },
+                reject:()=>{
+
+                }
+              })
         },
         reject:()=>{
 
         }
-      }
-    );
+      });
   //  timer(3000).subscribe(val => dia.close());
   }
   @HostListener('document:dragover', ['$event'])

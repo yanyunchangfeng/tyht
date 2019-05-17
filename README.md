@@ -69,7 +69,7 @@ export class DialogDemo  implements OnInit{
                 okVisible:true,
                 offVisible:true,
                 okButton:'blue',
-                offButton:'green',
+                offButton:'red',
                 okLabel:``,
                 key:"2",
                 // delay:3000,
@@ -110,19 +110,19 @@ export class DialogDemo  implements OnInit{
 ```
 
 
-| 参数     | 说明         | 类型         | 默认值 |
+| 参数     | 说明         | 类型         | 默认值 | 
 |----------|-------------|-------------|-------|
 | key   | 标识当前对话框的唯一性 | string     | null  |
 | width   | 设置对话框宽度 | string     | auto  |
 | height   | 设置对话框高度 | string     | auto  |
-| opacity   | 设置对话框透明度 | number     | .5  |
-| message   | 设置对话框标题 | string     | How are you  |
-| header    | 对话框的类型   | string     |   waiting|
-| okVisible   | 确定按钮的可见性 | Boolean     | true  |
+| opacity   | 设置对话框透明度 | number   | .5  |
+| message   | 设置对话框标题 | string     | yycf-dialog|
+| header    | 对话框的类型   | 'waiting' 'ok' 'warning' |   waiting|
+| okVisible   | 确定按钮的可见性 | boolean    | true  |
 | offVisible   | 取消按钮的可见性 | string     | true  |
-| okButton   | 确定按钮的颜色| string          | blue  |
-| offButton   | 设置对话框标题 | string        | green |
-| okLabel   | 确定按钮的内容| string           | 确定 |
+| okButton   | 确定按钮的颜色| 'blue' 'green' 'red'     | 'blue'  |
+| offButton   | 取消按钮的颜色 | 'blue' 'green' 'red'     | green |
+| okLabel   | 确定按钮的内容|  string           | 确定 |
 | offLabel   | 取消按钮的内容 | string         | 取消  |
 | delay      | 指定对话框的生命周期| number(ms) |  null  |
 | accept      | 确定按钮的回调函数| Function    |  null  |

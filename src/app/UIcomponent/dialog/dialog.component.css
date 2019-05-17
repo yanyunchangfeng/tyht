@@ -18,7 +18,7 @@
 }
 
 .g-dialog-container .dialog-window {
-  width: 15rem;
+  min-width: 16rem;
   padding: 1rem;
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.8);
@@ -123,10 +123,8 @@
   border: none;
   padding: 0.5rem 1.5rem;
   margin: 0.3rem;
-  text-shadow: #666 1px 1px;
   outline: none;
   font-size: 1rem;
-  border-radius: 5px;
   color: #eee;
 }
 
@@ -135,35 +133,35 @@
 }
 
 .g-dialog-container .dialog-window .dialog-footer button.green:hover {
-  background-color: #0a610a;
+  background-color: #14bf14;
 }
 
 .g-dialog-container .dialog-window .dialog-footer button.green:active {
-  background-color: #1de71d;
+  background-color: #095509;
 }
 
 .g-dialog-container .dialog-window .dialog-footer button.red {
-  background-color: #8f0f0f;
+  background-color: #f6214b;
 }
 
 .g-dialog-container .dialog-window .dialog-footer button.red:hover {
-  background-color: #610a0a;
+  background-color: #f85475;
 }
 
 .g-dialog-container .dialog-window .dialog-footer button.red:active {
-  background-color: #e71d1d;
+  background-color: #cf0830;
 }
 
 .g-dialog-container .dialog-window .dialog-footer button.blue {
-  background-color: #39b9c6;
+  background-color: #01869a;
 }
 
 .g-dialog-container .dialog-window .dialog-footer button.blue:hover {
-  background-color: #2e949e;
+  background-color: #01b4cf;
 }
 
 .g-dialog-container .dialog-window .dialog-footer button.blue:active {
-  background-color: #88d5dd;
+  background-color: #014f5b;
 }
 
 @-webkit-keyframes waiting1 {

@@ -1,7 +1,8 @@
 {
   "name": "tyht",
-  "version": "8.0.1",
+  "version": "8.0.3",
   "license": "MIT",
+  "description": "angular dialog component",
   "scripts": {
     "ng": "ng",
     "start": "concurrently \"ng serve --port 4202 -o\"  \"npm run serve\" ",
@@ -64,5 +65,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/yanyunchangfeng/tyht.git"
-  }
+  },
+  "keywords": ["dialog","angular","modal","yycf"]
 }
