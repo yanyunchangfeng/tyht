@@ -1,6 +1,5 @@
 import {
-  Component, OnDestroy,ContentChild, OnInit,ElementRef, EventEmitter, Input, NgModule,
-  ViewChild
+  Component, OnDestroy,ContentChild, OnInit,EventEmitter, Input, NgModule,
 } from '@angular/core';
 import {animate, query, trigger,} from "@angular/animations"
 import {Footer} from "./footer.component";
@@ -42,6 +41,15 @@ const css_STYLE = `.g-dialog-container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.g-dialog-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
 }
 
 .g-dialog-container .dialog-window {
@@ -285,7 +293,6 @@ export class DialogComponent implements OnDestroy,OnInit{
   @Input() visible:boolean;
   @Input() delay:number;
   dialog:Dialog;
-  @ViewChild('mask') mask:ElementRef
   @ContentChild(Footer) footer;
   subscription:Subscription;
   constructor(

@@ -17,6 +17,15 @@
           justify-content: center;
 }
 
+.g-dialog-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
 .g-dialog-container .dialog-window {
   min-width: 16rem;
   padding: 1rem;

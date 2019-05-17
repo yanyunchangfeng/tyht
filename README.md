@@ -51,7 +51,7 @@ export class DialogDemo  implements OnInit{
  
     ngOnInit(){
 
-    this.dialog.confirm(
+     this.dialog.confirm(
       {
         message:'确定要删除吗?',
         header:'warning',
@@ -86,12 +86,6 @@ export class DialogDemo  implements OnInit{
                     key:"3",
                     // delay:3000,
                     offLabel: ``,
-                    accept:()=>{
-    
-                    },
-                    reject:()=>{
-    
-                    }
                   })
 
                 },
@@ -108,8 +102,6 @@ export class DialogDemo  implements OnInit{
 }
 
 ```
-
-
 | 参数     | 说明         | 类型         | 默认值 | 
 |----------|-------------|-------------|-------|
 | key   | 标识当前对话框的唯一性 | string     | null  |
@@ -127,6 +119,32 @@ export class DialogDemo  implements OnInit{
 | delay      | 指定对话框的生命周期| number (ms) |  null  |
 | accept      | 确定按钮的回调函数| Function    |  null  |
 | reject      | 取消按钮的回调函数| Function    |  null  |
+ 
+
+ ##  DialogService API
+  |名称    | 参数       |    描述  |
+  |--------|----------|-------|
+  |confirm |  object   | 创建对话框|
+  |close   |无         | 关闭对话框|
+
+  ``` 
+      let dia = this.dialog.confirm({
+        message:'正在拼命加载',
+        header:'warning',
+        okVisible:true,
+        offVisible:true,
+        okButton:'blue',
+        offButton:'green',
+        okLabel:``,
+        offLabel: ``,
+      });
+
+      setTimeout(() => dia.close(),3000)
+
+  ```
+
+  
+
 
 ## 我参与的系列项目
 

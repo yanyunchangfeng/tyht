@@ -1,4 +1,4 @@
-import { OnDestroy, OnInit, ElementRef } from '@angular/core';
+import { OnDestroy, OnInit } from '@angular/core';
 import { DialogService } from "./dialog.service";
 import { Subscription } from "rxjs";
 import { Dialog } from "./dialog";
@@ -20,7 +20,6 @@ export declare class DialogComponent implements OnDestroy, OnInit {
     visible: boolean;
     delay: number;
     dialog: Dialog;
-    mask: ElementRef;
     footer: any;
     subscription: Subscription;
     constructor(dialogService: DialogService);

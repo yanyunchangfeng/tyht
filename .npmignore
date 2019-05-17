@@ -9,6 +9,13 @@ tslint.json
 tsconfig-release.json
 angular.json
 # aot
+
 *.ngfactory.js
 *.ngfactory.js.map
 *.ngsummary.json
+
+*.spec.d.ts
+*.spec.js
+*.spec.js.map
+*.spec.metadata.json
+*.spec.ngsummary.json

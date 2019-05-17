@@ -18,7 +18,7 @@ export class DiademoComponent implements OnInit {
     private si: DomSanitizer
     ) { }
   ngOnInit() {
-    this.dialog.confirm(
+    let dia = this.dialog.confirm(
       {
         message:'确定要删除吗?',
         header:'warning',
@@ -53,12 +53,7 @@ export class DiademoComponent implements OnInit {
                     key:"3",
                     // delay:3000,
                     offLabel: ``,
-                    accept:()=>{
-    
-                    },
-                    reject:()=>{
-    
-                    }
+                
                   })
 
                 },
@@ -71,7 +66,8 @@ export class DiademoComponent implements OnInit {
 
         }
       });
-  //  timer(3000).subscribe(val => dia.close());
+     setTimeout(()=>dia.close(),3000)
+    
   }
   @HostListener('document:dragover', ['$event'])
   documentonDragOver(e) {

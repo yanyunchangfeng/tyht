@@ -1,12 +1,12 @@
 <yycf-dialog [key]="'1'" ></yycf-dialog>
 <yycf-dialog [key]="'2'"></yycf-dialog>
-<yycf-dialog [key]="'3'" [okButton]="'red'" ></yycf-dialog>
+<yycf-dialog [key]="'3'"  ></yycf-dialog> 
 
 <yycf-dialog [key]="'4'" #ct >
-    <!-- <yycf-footer> -->
-      <!-- <button class="blue" (click)="ct.accept()">确定</button>
-      <button class="green" (click)="ct.reject()">取消</button> -->
-    <!-- <yycf-footer> -->
+    <yycf-footer> 
+      <button class="blue" (click)="ct.accept()">确定</button>
+      <button class="green" (click)="ct.reject()">取消</button> 
+    <yycf-footer>
 <yycf-dialog>
 <!-- <img src="assets/img/ym.jpg" width="100" (dragstart)="onDragStart($event)" (drag)="onDrag($event)" (dragend)="onDragEnd($event)" [ngStyle]="{'left.px':left,'top.px':top}">
 <div (dragenter)="onDragEnter($event)" (dragover)="onDragOver($event)" (dragleave)="onDragLeave($event)" (drop)="onDrop($event)" class="imgContainer">
