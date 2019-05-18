@@ -341,18 +341,22 @@ export class DialogComponent implements OnDestroy,OnInit{
         if(this.dialog.accept) {
           this.dialog.acceptEvent = new EventEmitter();
           this.dialog.acceptEvent.subscribe(()=>{
-            this.dialog.accept();
-            this.hide();
-            this.dialog = null;
+            let isClose = this.dialog.accept();
+            if(isClose !== false){
+              this.hide();
+              this.dialog = null;
+            }   
           })
         }
         if(this.dialog.reject) {
           this.dialog.rejectEvent = new EventEmitter();
           this.dialog.rejectEvent.subscribe(
             ()=>{
-              this.dialog.reject();
-              this.hide();
-              this.dialog = null;
+              let isClose = this.dialog.reject();
+              if(isClose !== false){
+                this.hide();
+                this.dialog = null;
+              }
             }
           );
         }

@@ -55,6 +55,7 @@ export class DiademoComponent implements OnInit {
                     offLabel: ``,
                 
                   })
+                  return false
 
                 },
                 reject:()=>{
@@ -66,7 +67,7 @@ export class DiademoComponent implements OnInit {
 
         }
       });
-     setTimeout(()=>dia.close(),3000)
+    //  setTimeout(()=>dia.close(),3000)
     
   }
   @HostListener('document:dragover', ['$event'])

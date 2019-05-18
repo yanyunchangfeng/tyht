@@ -77,17 +77,21 @@ var DialogComponent = /** @class */ (function () {
                 if (_this.dialog.accept) {
                     _this.dialog.acceptEvent = new core_1.EventEmitter();
                     _this.dialog.acceptEvent.subscribe(function () {
-                        _this.dialog.accept();
-                        _this.hide();
-                        _this.dialog = null;
+                        var isClose = _this.dialog.accept();
+                        if (isClose !== false) {
+                            _this.hide();
+                            _this.dialog = null;
+                        }
                     });
                 }
                 if (_this.dialog.reject) {
                     _this.dialog.rejectEvent = new core_1.EventEmitter();
                     _this.dialog.rejectEvent.subscribe(function () {
-                        _this.dialog.reject();
-                        _this.hide();
-                        _this.dialog = null;
+                        var isClose = _this.dialog.reject();
+                        if (isClose !== false) {
+                            _this.hide();
+                            _this.dialog = null;
+                        }
                     });
                 }
                 if (_this.delay && _this.delay != 0) {

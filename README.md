@@ -100,8 +100,8 @@ export class DialogDemo  implements OnInit{
       });
    }
 }
-
 ```
+
 | 参数     | 说明         | 类型         | 默认值 | 
 |----------|-------------|-------------|-------|
 | key   | 标识当前对话框的唯一性 | string     | null  |
@@ -118,14 +118,21 @@ export class DialogDemo  implements OnInit{
 | offLabel   | 取消按钮的内容 | string         | 取消  |
 | delay      | 指定对话框的生命周期| number (ms) |  null  |
 | accept      | 确定按钮的回调函数| Function    |  null  |
-| reject      | 取消按钮的回调函数| Function    |  null  |
+| reject      | 取消按钮的回调函数| Function    |  null  |  
  
+## PS:若回调函数的返回值为false ，则执行后不关闭对话框
 
- ##  DialogService API
+
+## DialogService API  
+ 
   |名称    | 参数       |    描述  |
   |--------|----------|-------|
   |confirm |  object   | 创建对话框|
-  |close   |无         | 关闭对话框|
+  |close   | 无        | 关闭对话框|  
+
+
+  
+
 
   ``` 
       let dia = this.dialog.confirm({
