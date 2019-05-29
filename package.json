@@ -1,6 +1,6 @@
 {
   "name": "tyht",
-  "version": "9.6.0",
+  "version": "9.8.0",
   "license": "MIT",
   "description": "angular dialog component",
   "scripts": {
@@ -66,5 +66,5 @@
     "type": "git",
     "url": "https://github.com/yanyunchangfeng/tyht.git"
   },
-  "keywords": ["dialog","angular","modal","yycf"]
+  "keywords": ["dialog","loading","message","confirm","angular","modal","yycf"]
 }
