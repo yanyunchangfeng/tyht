@@ -30,8 +30,8 @@ var DialogComponent = /** @class */ (function () {
         this.offLabel = '取消';
         this.okVisible = true;
         this.offVisible = true;
-        this.okButton = 'primary';
-        this.offButton = 'secondary';
+        this.okButton = 'blue';
+        this.offButton = 'green';
     }
     DialogComponent.prototype.accept = function () {
         if (this.dialog.acceptEvent) {
@@ -167,7 +167,7 @@ var DialogComponent = /** @class */ (function () {
         __metadata("design:type", Number)
     ], DialogComponent.prototype, "delay", void 0);
     __decorate([
-        core_1.ContentChild(footer_component_1.Footer),
+        core_1.ContentChild(footer_component_1.Footer, { static: false }),
         __metadata("design:type", Object)
     ], DialogComponent.prototype, "footer", void 0);
     DialogComponent = __decorate([

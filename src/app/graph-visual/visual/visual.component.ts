@@ -15,7 +15,7 @@ import * as echarts from 'echarts';
   styleUrls: ['./visual.component.scss']
 })
 export class VisualComponent implements OnInit, OnDestroy {
-  @ViewChild('demo') demo: ElementRef;
+  @ViewChild('demo',{static:true}) demo: ElementRef;
   echart: any; // 存储echarts实例
   charType = {
     tooltip: {

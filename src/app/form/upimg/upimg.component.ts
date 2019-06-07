@@ -10,8 +10,8 @@ import {DomSanitizer} from "@angular/platform-browser";
   styleUrls: ['./upimg.component.scss']
 })
 export class UpimgComponent extends BasePage implements  OnInit {
-  @ViewChild('file') upfile :ElementRef;
-  @ViewChild('view') view :ElementRef;
+  @ViewChild('file',{static:true}) upfile :ElementRef;
+  @ViewChild('view',{static:true}) view :ElementRef;
   src;
   files:File[];
   constructor(

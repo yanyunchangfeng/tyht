@@ -61,7 +61,7 @@ import{ScrollPanel} from 'primeng/components/scrollpanel/scrollpanel';
 })
 export class AppRightpanelComponent implements AfterViewInit {
 
-  @ViewChild('scrollRightPanel') rightPanelMenuScrollerViewChild: ScrollPanel;
+  @ViewChild('scrollRightPanel',{static:true}) rightPanelMenuScrollerViewChild: ScrollPanel;
 
 
   constructor(public app: HomeComponent) {

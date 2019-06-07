@@ -5,7 +5,7 @@ import {SelectivePreloadingStrategy} from "./service/selective-preloading-strate
 import {AuthGuard} from "./service/auth-guard.service";
 const routes: Routes = [
   {path:'',canActivate:[AuthGuard],redirectTo:"index/visual",pathMatch:'full'},
-  {path:'login',loadChildren:'../app/login/login.module#LoginModule'},
+  {path:'login',loadChildren:() => import('../app/login/login.module').then(m => m.LoginModule)},
 ];
 @NgModule({
   imports: [HomeModule,RouterModule.forRoot(routes,{preloadingStrategy:SelectivePreloadingStrategy,useHash: true })],

@@ -288,12 +288,12 @@ export class DialogComponent implements OnDestroy,OnInit{
   @Input() zIndex:number;
   @Input() okVisible = true;
   @Input() offVisible = true;
-  @Input() okButton = 'primary';
-  @Input() offButton = 'secondary';
+  @Input() okButton = 'blue';
+  @Input() offButton = 'green';
   @Input() visible:boolean;
   @Input() delay:number;
   dialog:Dialog;
-  @ContentChild(Footer) footer;
+  @ContentChild(Footer,{static:false}) footer;
   subscription:Subscription;
   constructor(
     private dialogService:DialogService

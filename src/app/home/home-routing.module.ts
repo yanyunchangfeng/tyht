@@ -7,10 +7,10 @@ const route:Routes = [
     path:'index',component:HomeComponent,
     canActivateChild:[AuthGuard],
     children:[
-      {path:'visual',loadChildren:'../graph-visual/graph-visual.module#GraphVisualModule',data:{preload:true}},
-      {path:'cabient',loadChildren:'../cabient/cabient.module#CabientModule'},
-      {path:'form',loadChildren:'../form/form.module#FormModule'},
-      {path:'shadow',loadChildren:'../content-shadow/content-shadow.module#ContentShadowModule'},
+      {path:'visual',loadChildren:() => import('../graph-visual/graph-visual.module').then(m => m.GraphVisualModule),data:{preload:true}},
+      {path:'cabient',loadChildren:() => import('../cabient/cabient.module').then(m => m.CabientModule)},
+      {path:'form',loadChildren:() => import('../form/form.module').then(m => m.FormModule)},
+      {path:'shadow',loadChildren:() => import('../content-shadow/content-shadow.module').then(m => m.ContentShadowModule)},
     ]
   }
 ]
